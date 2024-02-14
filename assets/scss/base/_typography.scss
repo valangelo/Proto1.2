@@ -1,0 +1,29 @@
+// _typography.scss
+
+// Import variables
+@use '../base/_variables';
+
+// tested if fonts working
+body {
+  font-family: 'Short Stack';
+}
+
+.custom_Emoticon {
+  width: 2rem;
+  display: inline;  
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+h1{
+  font-size: var(--font-size-fluid-2);
+}
+p{
+  font-size: var(--font-size-fluid-1);
+}
+h2{
+  font-size: var(--font-size-fluid-1);
+}

@@ -1,0 +1,33 @@
+// _fonts.scss
+
+$font-path: "./assets/fonts/";
+
+// Define font faces for 'Caveat'
+@font-face {
+  font-family: 'Caveat';
+  src: url('#{$font-path}Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 1 999;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('#{$font-path}Caveat/static/Caveat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('#{$font-path}Caveat/static/Caveat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Define font faces for 'Short Stack'
+@font-face {
+  font-family: 'Short Stack';
+  src: url('#{$font-path}Short_Stack/ShortStack-Regular.ttf') format('truetype');
+  font-weight: 1 999;
+  font-style: normal;
+}

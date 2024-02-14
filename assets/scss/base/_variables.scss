@@ -1,0 +1,133 @@
+	// Asset Paths
+	$asset-path: "./assets/images/";
+	$image-border-border: url("#{$asset-path}border.svg") 10 stretch;
+	$image-border-button: url("#{$asset-path}button.svg") 10 stretch;
+	$image-background-texture:url("#{$asset-path}seamless_paper_texture.png");
+	// https://github.com/argyleink/open-props
+
+
+:where(html) {
+
+	// Colors
+	--clr-unvisited: hsla(240, 100%, 50%, 1); /* Blue */
+	--clr-visited: hsla(270, 100%, 50%, 1); /* Purple */
+	--clr-active: hsla(0, 100%, 50%, 1); /* Red */
+	--clr-font: hsla(0, 0%, 14%, 1);
+	--clr-background: hsla(30, 100%, 96%, 1);
+	--clr-mainBG:hsla(49, 16%, 87%,1);
+	--clr-link: hsla(0, 0%, 11%, 1);
+	--clr-border: hsla(0, 0%, 23%, 1);
+	--clr-shade: hsla(0, 0%, 73%, 1);
+	--clr-disabled: hsla(0, 0%, 50%, 1);
+  
+	// Breakpoints
+	--mobile-max: 767px;
+	--tablet: 768px;
+	--desktop: 992px;
+	--large-desktop: 1200px;
+  
+	// Font Sizes
+	--font-size-00: .5rem;
+	--font-size-0: .75rem;
+	--font-size-1: 1rem;
+	--font-size-2: 1.1rem;
+	--font-size-3: 1.25rem;
+	--font-size-4: 1.5rem;
+	--font-size-5: 2rem;
+	--font-size-6: 2.5rem;
+	--font-size-7: 3rem;
+	--font-size-8: 3.5rem;
+
+	--font-size-fluid-0: clamp(.75rem, 1.5vw, 1rem);
+	--font-size-fluid-1: clamp(1rem, 2vw, 1.5rem);
+	--font-size-fluid-2: clamp(1.5rem, 3vw, 2.5rem);
+	--font-size-fluid-3: clamp(2rem, 4vw, 3.5rem);
+  
+	// Size
+	--size-000: -.5rem;
+	--size-00: -.25rem;
+	--size-1: .25rem;
+	--size-2: .5rem;
+	--size-3: 1rem;
+	--size-4: 1.25rem;
+	--size-5: 1.5rem;
+	--size-6: 1.75rem;
+	--size-7: 2rem;
+	--size-8: 3rem;
+	--size-9: 4rem;
+	--size-10: 5rem;
+	--size-11: 7.5rem;
+	--size-12: 10rem;
+	--size-13: 15rem;
+	--size-14: 20rem;
+	--size-15: 30rem;
+
+	--size-fluid-1: clamp(.5rem, 1vw, 1rem);
+	--size-fluid-2: clamp(1rem, 2vw, 1.5rem);
+	--size-fluid-3: clamp(1.5rem, 3vw, 2rem);
+	--size-fluid-4: clamp(2rem, 4vw, 3rem);
+	--size-fluid-5: clamp(4rem, 5vw, 5rem);
+	--size-fluid-6: clamp(5rem, 7vw, 7.5rem);
+	--size-fluid-7: clamp(7.5rem, 10vw, 10rem);
+	--size-fluid-8: clamp(10rem, 20vw, 15rem);
+	--size-fluid-9: clamp(15rem, 30vw, 20rem);
+	--size-fluid-10: clamp(20rem, 40vw, 30rem);
+	
+	--size-header-1: 20ch;
+	--size-header-2: 25ch;
+	--size-header-3: 35ch;
+
+	// Spacing
+	--layout-padding: 3rem;
+	--border-width: 10px;     // Default border width
+	--border-radius: 4px;    // Default border radius
+  
+	// Box Shadow
+	--box-shadow: 0px 0px 10px 4px var(--clr-disabled),
+				   -4px -6px 15px 4px var(--clr-disabled),
+				   5px 6px 15px 3px var(--clr-shade);
+
+	
+  
+  // Shadow
+	--shadow-color: 220 3% 15%;
+	--shadow-strength: 10%;
+	--inner-shadow-highlight: inset 0 -.5px 0 0 #fff, inset 0 .5px 0 0 #0001;
+	--shadow-1: 0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+	--shadow-2: 
+	  0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	  0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+	--shadow-3: 
+	  0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+	  0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+	  0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+	  0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+	  0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+	--shadow-4: 
+	  0 -2px 5px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+	  0 1px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	  0 2px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	  0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+	  0 9px 9px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+	  0 16px 16px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%));
+	--shadow-5: 
+	  0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+	  0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	  0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	  0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+	  0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+	  0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+	--shadow-6: 
+	  0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+	  0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	  0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	  0 12px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+	  0 22px 18px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+	  0 41px 33px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
+	  0 100px 80px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+	--inner-shadow-0: inset 0 0 0 1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+	--inner-shadow-1: inset 0 1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+	--inner-shadow-2: inset 0 1px 4px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+	--inner-shadow-3: inset 0 2px 8px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+	--inner-shadow-4: inset 0 2px 14px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+  }

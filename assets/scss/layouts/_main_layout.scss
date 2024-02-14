@@ -1,0 +1,348 @@
+@use '../base/variables';
+
+body {
+	background-color: var(--clr-mainBG);
+	background: variables.$image-background-texture;
+	color:var(--clr-font);
+}
+
+
+  /* general styling */
+  
+  .container {
+	inline-size: min(100% - 4rem, 70rem);
+	margin-inline: auto;
+  }
+
+  .page-header {
+	padding-block: var(--size-9);
+	margin-block-end: var(--size-9);
+	background: var(--gradient-16);
+	// color: var(--gray-0);	
+	box-shadow: var(--shadow-2);
+  }
+  
+  .page-title {
+	font-size: var(--font-size-fluid-3);
+  }
+  
+  .page-subtitle {
+	font-size: var(--font-size-fluid-1);
+  }
+  
+  .section-title {
+	padding-inline-start: var(--size-6);
+	margin-block: var(--size-9) var(--size-3);
+  }
+
+  #portfolio{
+	display: grid;
+	// gap:1rem;
+	grid-auto-flow: column;
+	grid-auto-columns: 50%;
+	overflow-x:scroll ;
+	scroll-snap-type: x mandatory;
+}
+
+#portfolio > * {
+	scroll-snap-align: start;
+}
+// h1 {
+// 	// font-family: "Nanum Pen Script";
+// 	font-size: 45px;
+// 	padding: 5px 0px;
+// }
+// p {
+// 	padding: 5px 0px;
+// 	font-size: 22px;
+// }
+// // prevent draging and drop of image
+// img:active {
+// 	pointer-events: none;
+// }
+// @media (max-width: 768px) {
+// 	.valiw {
+// 		// background-color: red;
+// 		height: 150px;
+// 		width: 150px;
+// 	}
+// 	nav::before,
+// 	nav::after {
+// 		visibility: hidden;
+// 	}
+// 	.card-body,
+// 	.card-title,
+// 	.card-text {
+// 		// background-color: red;
+// 		font-size: 1rem !important;
+// 	}
+// }
+// @media (max-width: 576px) {
+// 	.card-body,
+// 	.card-title,
+// 	.card-text {
+// 		// background-color: red;
+// 		font-size: 2rem !important;
+// 	}
+// }
+// html,
+// body {
+// 	padding: 15px;
+// 	-webkit-user-select: none; /* Safari */
+// 	-ms-user-select: none; /* IE 10 and IE 11 */
+// 	user-select: none; /* Standard syntax */
+// }
+.htmlwrapper{
+	// font-family: "Nanum Pen Script";
+	// color: var(--clr-font);
+	position: relative;
+	&::before{
+		color:var(--clr-disabled);
+	content: "<html>";
+	}
+	&::after{
+		color:var(--clr-disabled);
+		content: "</html>";
+	}
+}
+
+.mainwrapper{
+	// color: var(--clr-font);
+	position: relative;
+	&::before{
+		color:var(--clr-disabled);
+		margin-left: 2rem;
+		content: "<body>";
+	}
+	&::after{
+		color:var(--clr-disabled);
+		margin-left:2rem;
+		content: "</body>";
+	}
+}
+nav{
+	// font-family: "Nanum Pen Script";
+	// color: var(--clr-disabled);	
+	position: relative;
+	&::before{
+		color:var(--clr-disabled);
+	position: absolute;
+	top:-2rem;
+	content: "<nav>";
+	}
+	&::after{
+		color:var(--clr-disabled);
+		position: absolute;
+		bottom:-2rem;
+		content: "</nav>";
+	}
+}
+header{
+	margin-block: 2rem;
+	position: relative;
+	&::before{
+	position: absolute;
+	left: 6rem;
+	top: 0;
+	color:var(--clr-disabled);
+		content: "<intro>";
+	}
+	&::after{
+	position: absolute;
+	bottom: 0;
+	left: 6rem;
+	right: 6rem;
+	color:var(--clr-disabled);
+		content: "</intro>";
+	}
+}
+.abouthim{
+	margin-block: 2rem;
+	position: relative;
+	&::before{
+	position: absolute;
+	left: .5rem;
+	top: 0;
+	color:var(--clr-disabled);
+		content: "<abouthim>";
+	}
+	&::after{
+	position: absolute;
+	bottom: 0;
+	left: .5rem;
+	color:var(--clr-disabled);
+		content: "</abouthim>";
+	}
+}
+// html::before,
+// html::after,
+// body::before,
+// body::after,
+// nav::before,
+// nav::after,
+// footer::before,
+// footer::after {
+// 	// font-family: "Nanum Pen Script";
+// 	color: grey;
+// 	position: relative;
+// }
+// html::before {
+// 	top: -15px;
+// 	content: "<html>";
+// }
+
+// html::after {
+// 	bottom: -15px;
+// 	content: "</html>";
+// }
+// body::before {
+// 	top: -30px;
+// 	content: "<body>";
+// }
+// body::after {
+// 	content: "</body>";
+// 	bottom: -30px;
+// }
+// nav::before {
+// 	content: "<nav>";
+// 	top: -60px;
+// }
+// nav::after {
+// 	content: "</nav>";
+// 	bottom: -60px;
+// }
+// footer::before {
+// 	top: -35px;
+// 	content: "<footer>";
+// }
+
+// footer::after {
+// 	content: "</footer>";
+// 	bottom: -35px;
+// }
+// // section::before {
+// // 	margin-left: auto;
+// //
+// // 	top: -5px;
+// // 	content: "<section>";
+// // }
+
+// // section::after {
+// // 	content: "</section>";
+// //
+// // 	bottom: -30px;
+// // }
+
+// #landing {
+// 	margin-top: 1rem;
+// }
+// #abouthim {
+// 	margin-top: 2rem;
+// }
+// #home > div,
+// .abouthim,
+// footer,
+// .divtools {
+// 	// @include container-borders;
+// }
+// // @media (prefers-reduced-motion: no-preference) {
+//   .valiw {
+//     animation: fade-in 1s linear forwards;
+//     animation-timeline: view(); 
+//     animation-range: contain 100px;
+// 	// animation-range-start:cover;
+// 	// animation-range-end: contain;	
+//     scale:0.8;
+//     opacity: 0;
+//   }
+
+//   @keyframes fade-in {
+//     to {
+//       scale:1;
+//       opacity: 1;
+//     }
+//   }
+// // }
+
+// .valiw {
+// 	-webkit-filter: drop-shadow(10px 10px 10px #222);
+// 	filter: drop-shadow(10px 10px 10px #222);
+// 	transition: 0.2s;
+// 	-webkit-transition: 0.2s;
+// 	-moz-transition: 0.2s;
+// 	-ms-transition: 0.2s;
+// 	-o-transition: 0.2s;
+// }
+// .valiw:hover {
+// 	filter: drop-shadow(5px 5px 5px #222);
+// 	-webkit-filter: drop-shadow(5px 5px 5px #222);
+// 	transform: 0.2s;
+// 	-webkit-transform: 0.2s;
+// 	-moz-transform: 0.2s;
+// 	-ms-transform: 0.2s;
+// 	-o-transform: 0.2s;
+// }
+// .img__tools {
+// 	width: 150px;
+// }
+// // footer {
+// // 	margin-top: 55rem;
+// // }
+
+
+
+
+
+// div > a > img:hover {
+// 	transform: translateY(2px);
+// 	filter: drop-shadow(1px 1px 1px #222);
+// 	-webkit-filter: drop-shadow(1px 1px 1px #222);
+// 	-webkit-transform: translateY(2px);
+// 	-moz-transform: translateY(2px);
+// 	-ms-transform: translateY(2px);
+// 	-o-transform: translateY(2px);
+// }
+// div > a > img {
+// 	  width: 50px;
+//   height: 50px;
+// 	filter: drop-shadow(4px 4px 4px #222);
+// 	-webkit-filter: drop-shadow(4px 4px 4px #222);
+// }
+// .proto {
+// 	transform: translateY(10px);
+// 	-webkit-transform: translateY(10px);
+// 	-moz-transform: translateY(10px);
+// 	-ms-transform: translateY(10px);
+// 	-o-transform: translateY(10px);
+// }
+
+
+.content-wrapper {
+	// display: grid;
+	// grid-template-rows: repeat(1, 1fr); 
+	// grid-template-areas: 
+	// ". intro-proto intro-prologue."
+	// ;
+	// grid-gap: 20px; /* Adjust the gap between columns */	
+}
+// .intro-wrapper{
+// 	grid-template-columns: repeat(2, 1fr); 
+// 	// grid-template-columns: subgrid;
+// 	grid-template-areas: 
+// 	"intro-section";	
+// }
+.intro-section{
+	// grid-area: intro-section;
+    // display: grid;
+	// grid-template-rows: repeat(2, 1fr); 
+    // grid-template-areas:
+    //     "intro_proto intro_prologue";
+}
+
+
+.intro_proto{
+grid-area: intro_proto;
+}
+.intro_prologue{
+	grid-area:intro_prologue
+}

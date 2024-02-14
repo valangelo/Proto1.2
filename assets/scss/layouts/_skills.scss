@@ -1,0 +1,67 @@
+@use "../base/_variables";
+
+
+// USE?
+// <figure>
+//   <img src="https://assets.codepen.io/1506195/portrait-woman-unsplash.jpg" />
+//   <figcaption>Test</figcaption>
+// </figure>
+
+// <figure>
+//   <img src="https://assets.codepen.io/1506195/portrait-woman-unsplash.jpg" />
+//   <figcaption>Test</figcaption>
+// </figure>
+
+// <figure>
+//   <img src="https://assets.codepen.io/1506195/portrait-woman-unsplash.jpg" />
+//   <figcaption>Test</figcaption>
+// </figure>
+.skills {
+    margin-inline: 3rem;
+    // text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.skills-container{
+    // background-color: red;
+    margin-inline: 3rem;
+    display: grid;
+    grid-gap: 11rem;
+    grid-template-columns: repeat(3,1fr);
+   
+}
+
+.skill-category {
+    list-style-type: circle;
+    h2{
+        padding-bottom: 1rem;
+    }
+    ul{
+        list-style-type: circle;
+        margin-bottom: 1rem;
+        padding-inline: 1.5rem;
+        li{
+            // color:red;
+            list-style-type: circle;
+        }
+    }
+    --c: 50px;
+    --p: 30px;
+    --d: 10px;
+    display: inline-block;
+    padding: var(--p);
+    background:
+    radial-gradient(farthest-side at 0 0, #000, #0000) 0 0 / var(--c) var(--c),
+    radial-gradient(farthest-side at 100% 100%, #000, #0000) 100% 100% / var(--c) var(--c),
+    linear-gradient(#ffffffec 0 0) 50% 50% / calc(100% - var(--p)) calc(100% - var(--p)),
+    linear-gradient(#0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--p)) calc(100% - var(--d)),
+    linear-gradient(90deg, #0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--d)) calc(100% - var(--p)),
+    radial-gradient(farthest-side at 0 100%, #00000018, #0000) calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5) / var(--d) var(--d),
+    radial-gradient(farthest-side at 100% 0, #00000018, #0000) calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5) / var(--d) var(--d)
+    ;
+    filter: brightness(0.99);
+    background-repeat: no-repeat;
+    // background-image: variables.$image-background-texture;
+    clip-path: polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
+  }
+  

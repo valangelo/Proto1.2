@@ -1,0 +1,28 @@
+// note to self
+
+// Base: contained within this file are all your resets, variables, mixins, and any utility classes.
+
+// Layout: contains all the CSS that handles the layout, such as the container and any grid systems.
+
+// Components: anything reusable such as buttons, navbars, cards etc.
+
+//Base
+@use "./assets/scss/base/reset";
+@use "./assets/scss/base/variables";
+@use "./assets/scss/base/_fonts";
+@use "./assets/scss/base/typography";
+@use "./assets/scss/base/doodle";
+@use "./assets/scss/base/animations";
+
+// Components
+@use "./assets/scss/components/navbar";
+@use "./assets/scss/components/cards";
+@use "./assets/scss/components/scrollbar";
+@use "./assets/scss/components/card_effect";
+// Layout
+// @use "./assets/scss/layouts/container_tag";
+// @use "./assets/scss/layouts/tdnn";
+@use "./assets/scss/layouts/main_layout";
+@use "./assets/scss/layouts/skills";
+@use "./assets/scss/layouts/intro";
+@use "./assets/scss/layouts/abouthim";

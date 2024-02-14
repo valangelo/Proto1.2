@@ -1,0 +1,48 @@
+/*
+Idea Doodle CSS
+kaso bawal daw pahiram nlng ng svg
+*/
+/* Doodle CSS
+ * https://github.com/chr15m/DoodleCSS
+ */
+
+ @import './variables';
+$image-border-border: url("#{$asset-path}border.svg") 10 10 10 10 stretch stretch;
+$image-border-button: url("#{$asset-path}button.svg") 10 10 10 10 stretch stretch;
+
+
+.doodle * {
+	  box-sizing: border-box;
+}
+
+.doodle input,
+.doodle textarea {
+	max-width: 100%;
+}
+
+.doodle textarea {
+	border-style: solid;
+	border-width: var(border-width);
+	border-image: var($image-border-border)
+}
+
+.doodle button,
+.doodle input,
+.doodle select {
+	border-style: solid;
+	border-width: 10px 10px 10px 10px;
+	border-image: var($image-border-button)
+}
+.doodle-border {
+	border-style: solid;
+	border-width: var(border-width);
+	border-image: var($image-border-button);
+	filter: brightness(1) contrast(1.2);
+	-webkit-filter: brightness(1) contrast(1.2);
+}
+
+#subject,
+#body,
+#commentbox {
+	background-color: unset;
+}

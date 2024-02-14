@@ -1,0 +1,109 @@
+@use "../base/_variables";
+
+// https://codepen.io/jo_Geek/pen/xgbaEr
+
+nav {
+	--shadow-color: 360, 100%, 50%;
+	--shadow-strength: 10%;
+	--shadow:var( --shadow-5,
+	0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+	0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+	0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+	0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
+	box-shadow: var(--shadow);
+	margin-top: 1.5rem;
+	margin-inline: var(--layout-padding);
+	background: var(--background);
+	background: variables.$image-background-texture;
+	background-color: var(--clr-mainBG);
+	border-style: solid;
+	border-width: var(--border-width);
+	border-image: variables.$image-border-button;
+	background-blend-mode:multiply;
+	background-repeat:  repeat;
+	// position: sticky;
+  }
+  .navbar{
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+  }
+
+
+.nav-label {
+  display: flex;
+  align-items: center;
+  img {
+    height: 4rem;
+    margin-inline: 2rem; // Adjust the margin as needed
+  }
+
+  h1.logo {
+    margin: 0; // Remove default margin to avoid extra spacing
+  }
+}
+  .nav_links {
+	display: grid;
+	grid-auto-flow: column;
+	gap: .5rem; /* Adjust as needed */
+	padding: 0;
+	margin: 0;
+	justify-content: end;  }
+
+	.nav_links li{
+		text-align: center;
+		width: 10rem;
+		margin-block: 1rem;
+		padding-block: 1rem;
+		background: var(--background);
+		background: variables.$image-background-texture;
+		background-color: var(--clr-mainBG);
+		// position: relative;
+		border-style: solid;
+		border-width: var(--border-width);
+		border-image: variables.$image-border-button;
+		background-blend-mode:multiply;
+		background-repeat:  repeat;
+	}
+  .nav_links li  a{
+	color:var(--background);
+	// margin-left: 15px; /* Adjust as needed */
+	// 
+  }
+  .nav-toggle{
+	display: none;
+  }
+  #nav-toggle:checked + .navbar .nav_links,
+    #nav-toggle:hover + .navbar .nav_links,
+    #nav-toggle:focus + .navbar .nav_links {
+      display: block;
+    }
+
+  @media screen and (max-width: 750px) {
+
+
+	.navbar {
+		grid-template-columns: 1fr auto;
+	  }
+	
+	  .nav_links {
+		display: none;
+		flex-direction: column;
+		align-items: flex-end;
+		position: absolute;
+		top: 60px; /* Adjust as needed */
+		right: 0;
+		background-color: white; /* Adjust the background color as needed */
+		padding: 10px;
+		width: 25vw;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust the box shadow as needed */
+	  }
+
+  #nav-toggle:not(:checked) + .nav_links {
+	display: none;
+  }
+
+ 
+}
