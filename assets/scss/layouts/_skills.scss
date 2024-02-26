@@ -1,5 +1,5 @@
 @use "../base/_variables";
-
+@use "../components/stickynote_effect";
 
 // USE?
 // <figure>
@@ -17,16 +17,33 @@
 //   <figcaption>Test</figcaption>
 // </figure>
 .skills {
-    margin-inline: 3rem;
+    padding: 3rem;
+    margin: 3rem;
     // text-align: center;
     align-items: center;
     align-content: center;
+
+    background: var(--background);
+    background: variables.$image-background-texture;
+    background-color: var(--clr-mainBG);
+	filter: brightness(1.05);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-image: variables.$image-border-button;
+	--shadow:var( --shadow-4,
+	0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+	0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+	0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+	0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
+	box-shadow: var(--shadow);
+	
 }
 .skills-container{
-    // background-color: red;
-    margin-inline: 3rem;
-    display: grid;
-    grid-gap: 11rem;
+    // margin-inline: 3rem;
+    // display: grid;
+    // grid-gap: 11rem;
     grid-template-columns: repeat(3,1fr);
    
 }
@@ -45,23 +62,26 @@
             list-style-type: circle;
         }
     }
-    --c: 50px;
-    --p: 30px;
-    --d: 10px;
-    display: inline-block;
-    padding: var(--p);
-    background:
-    radial-gradient(farthest-side at 0 0, #000, #0000) 0 0 / var(--c) var(--c),
-    radial-gradient(farthest-side at 100% 100%, #000, #0000) 100% 100% / var(--c) var(--c),
-    linear-gradient(#ffffffec 0 0) 50% 50% / calc(100% - var(--p)) calc(100% - var(--p)),
-    linear-gradient(#0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--p)) calc(100% - var(--d)),
-    linear-gradient(90deg, #0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--d)) calc(100% - var(--p)),
-    radial-gradient(farthest-side at 0 100%, #00000018, #0000) calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5) / var(--d) var(--d),
-    radial-gradient(farthest-side at 100% 0, #00000018, #0000) calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5) / var(--d) var(--d)
-    ;
-    filter: brightness(0.99);
-    background-repeat: no-repeat;
+    // --c: 50px;
+    // --p: 30px;
+    // --d: 10px;
+    // display: inline-block;
+    // padding: var(--p);
+    // This background (radial-gradient) is for the FAKE box-shadow)
+    // background:
+    // radial-gradient(farthest-side at 0 0, #000, #0000) 0 0 / var(--c) var(--c),
+    // radial-gradient(farthest-side at 100% 100%, #000, #0000) 100% 100% / var(--c) var(--c),
+    // linear-gradient(#ffffffec 0 0) 50% 50% / calc(100% - var(--p)) calc(100% - var(--p)),
+    // linear-gradient(#0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--p)) calc(100% - var(--d)),
+    // linear-gradient(90deg, #0000, #000 25% 75%, #0000) 50% 50% / calc(100% - var(--d)) calc(100% - var(--p)),
+    // radial-gradient(farthest-side at 0 100%, #00000018, #0000) calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5) / var(--d) var(--d),
+    // radial-gradient(farthest-side at 100% 0, #00000018, #0000) calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5) / var(--d) var(--d)
+    // ;
+    // filter: brightness(0.99);
+    // background-repeat: no-repeat;
     // background-image: variables.$image-background-texture;
-    clip-path: polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
+    // clip-path: polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
   }
+  
+
   

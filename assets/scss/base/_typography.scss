@@ -2,14 +2,113 @@
 
 // Import variables
 @use '../base/_variables';
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('/assets/fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype'),
+       url('/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf') format('truetype');
+  font-weight: normal; /* Corresponds to the regular font file */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('/static/Caveat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('/static/Caveat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('/static/Caveat-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('/static/Caveat-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* Semi-bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caveat';
+  src: url('/static/Caveat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 1 999; /* Variable font weight range */
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GloriaHallelujah';
+  src: url('/assets/fonts/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mansalva';
+  src: url('/assets/fonts/Mansalva/Mansalva-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mynerve';
+  src: url('/assets/fonts/Mynerve/Mynerve-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/assets/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shadows into Light';
+  src: url('/assets/fonts/Shadows_into_Light/ShadowsintoLight-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 // tested if fonts working
 body {
+  // font-family: GloriaHallelujah;
   font-family: 'Short Stack';
+}
+h1{
+  font-family: 'Short Stack';
+}
+h2{
+  font-family: 'System Ui';
+}
+li{
+  // font-family: 'Short Stack';
+  //  
+}
+p{
+  font-family: 'Short Stack';
+  font-weight: bold;
+}
+span{
+  font-family: 'Mansalva';
+  font-weight: bold;
 }
 
 .custom_Emoticon {
   width: 2rem;
+  margin-inline: .25rem;
   display: inline;  
 }
 
@@ -17,6 +116,11 @@ strong {
   font-weight: bold;
 }
 
+.nav_links{
+  font-size: 1.75em;
+  font-family: 'Mansalva';
+  font-weight: bold;
+}
 
 h1{
   font-size: var(--font-size-fluid-2);

@@ -1,0 +1,87 @@
+@use "../base/_variables";
+@use "../components/stickynote_effect";
+
+.projects {
+    margin: 0 auto; /* Center the section */
+    // width: 80vw;    /* Consume 80% of viewport width */
+    padding: 3rem;
+    margin: 3rem;
+    align-items: center;
+    align-content: center;
+
+    background: var(--background);
+    background: variables.$image-background-texture;
+    background-color: var(--clr-mainBG);
+	filter: brightness(1.05);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-image: variables.$image-border-button;
+	--shadow:var( --shadow-4,
+	0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+	0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+	0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+	0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+	0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
+	box-shadow: var(--shadow);
+}
+
+.skills-container {
+    /* Optionally, you can center the skills container within the section */
+    margin: 0 auto;
+    // max-width: 600px; /* Adjust the max-width as needed */
+}
+
+
+
+.portfolio-scroller {
+    background-color: red;
+    --_spacer: var(--size-3);
+    display: grid;
+    gap: var(--_spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    padding: 0 var(--_spacer) var(--_spacer);
+  
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+
+
+.media-scroller {
+  --_spacer: 3rem;
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  padding: 0 var(--_spacer) var(--_spacer);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+
+.media-element {
+  margin-top: var(--_spacer);
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--_spacer);
+  padding: var(--_spacer);
+  box-shadow: var(--shadow-5);
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit:scale-down;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+

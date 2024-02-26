@@ -1,40 +1,94 @@
 @use '../base/variables';
-
-
-
 .intro-section {
     display: flex;
     justify-content: center;
-    margin-block:3rem ;
+    margin-block:5rem ;
     .intro-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         width: fit-content; 
+		
     }
     .intro_proto {
+        min-height: 15rem;
         filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
         margin: 3rem;
     }
     .intro_prologue {
-    // background: var(--background);
+	padding: 1.75rem;
     background: variables.$image-background-texture;
-    // background-color: var(--clr-mainBG);
-    // background-color: hsla(0, 0%, 100%, 0.925);
+    background-color: var(--clr-mainBG);
+    background-color: hsla(0, 0%, 100%, 0.925);
     filter: brightness(1.15);
-    border-style: solid;
-    border-width: var(--border-width);
-    border-image: variables.$image-border-button;
-	--shadow:var( --shadow-4,
-	0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-	0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-	0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-	0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-	0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-	0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
-	box-shadow: var(--shadow);
-    padding: 1.75rem;
-    text-align: center;
+        h1{
+            margin-block-end:2rem ;
+            color: var(--clr-font);
+            font-size: var(--font-size-fluid-2);
+        }
+        div{
+            margin-block: 2rem;
+            font-size:var(--font-size-fluid-3);
+        }
+        p{
+            line-height: 4rem;
+            font-size: var(--font-size-fluid-1);
+        }
+
+   
     }
 
+}
+
+
+
+$black: #000;
+$white: #fff;
+$shadow: rgba(0,0,0,0.1);
+$px:7px;
+
+
+$bubble-border: 0 -1*$px $white, 
+		0 -2*$px $black, 
+		$px 0 $white, 
+		$px -1*$px $black, 
+		2*$px 0 $black, 
+		0 $px $white, 
+		0 2*$px $black, 
+		-1*$px 0 $white, 
+		-1*$px  $px $black, 
+		-2*$px 0 $black, 
+		-1*$px -1*$px $black, 
+		$px $px $black;
+
+.bubble {
+	position: relative;
+	text-align: center;
+	color: $black;
+	padding: 3*$px;
+	box-shadow: $bubble-border;
+    box-shadow: $bubble-border, $px 3*$px $shadow, 3*$px $px $shadow, 2*$px 2*$px $shadow; 
+	&::after {	content: '';
+	display: block;
+	position: absolute;
+	box-sizing: border-box;	
+		height: $px;
+		width: $px;
+		top: 5*$px;
+		left: -2*$px;
+		background: white;
+		box-shadow: 
+			-1*$px -1*$px $white,
+			-1*$px 0 $white,
+			-2*$px 0 $white,
+			0 -2*$px $white,
+			-1*$px 1*$px $black, 
+			-2*$px 1*$px $black, 
+			-3*$px 1*$px $black, 
+			-4*$px 1*$px $black,
+			-3*$px 0 $black, 
+			-2*$px -1*$px $black, 
+			-1*$px -2*$px $black,
+			0 -1*$px $white;
+	}
 }

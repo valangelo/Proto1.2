@@ -129,10 +129,15 @@ video {
   --clr-font: hsla(0, 0%, 14%, 1);
   --clr-background: hsla(30, 100%, 96%, 1);
   --clr-mainBG:hsla(49, 16%, 87%,1);
-  --clr-link: hsla(0, 0%, 11%, 1);
-  --clr-border: hsla(0, 0%, 23%, 1);
+  --clr-link: hsl(0, 0%, 11%);
+  --clr-border: hsla(0, 0%, 50%, 1);
   --clr-shade: hsla(0, 0%, 73%, 1);
   --clr-disabled: hsla(0, 0%, 50%, 1);
+  --pink: #ecb2ba;
+  --pink-dark: #c6939a;
+  --tape-gray: #dbd8be;
+  --tape-edge-gray: #b7b49d;
+  --transparent: rgba(255, 255, 255, 0);
   --mobile-max: 767px;
   --tablet: 768px;
   --desktop: 992px;
@@ -253,16 +258,107 @@ video {
   font-weight: 1 999;
   font-style: normal;
 }
+@font-face {
+  font-family: "Amatic SC";
+  src: url("/assets/fonts/Amatic_SC/AmaticSC-Regular.ttf") format("truetype"), url("/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf") format("truetype");
+  font-weight: normal; /* Corresponds to the regular font file */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("/static/Caveat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("/static/Caveat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("/static/Caveat-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("/static/Caveat-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* Semi-bold weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("/static/Caveat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 1 999; /* Variable font weight range */
+  font-style: normal;
+}
+@font-face {
+  font-family: "GloriaHallelujah";
+  src: url("/assets/fonts/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mansalva";
+  src: url("/assets/fonts/Mansalva/Mansalva-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mynerve";
+  src: url("/assets/fonts/Mynerve/Mynerve-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url("/assets/fonts/Pacifico/Pacifico-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shadows into Light";
+  src: url("/assets/fonts/Shadows_into_Light/ShadowsintoLight-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Short Stack";
 }
 
+h1 {
+  font-family: "Short Stack";
+}
+
+h2 {
+  font-family: "System Ui";
+}
+
+p {
+  font-family: "Short Stack";
+  font-weight: bold;
+}
+
+span {
+  font-family: "Mansalva";
+  font-weight: bold;
+}
+
 .custom_Emoticon {
   width: 2rem;
+  margin-inline: 0.25rem;
   display: inline;
 }
 
 strong {
+  font-weight: bold;
+}
+
+.nav_links {
+  font-size: 1.75em;
+  font-family: "Mansalva";
   font-weight: bold;
 }
 
@@ -292,10 +388,15 @@ kaso bawal daw pahiram nlng ng svg
   --clr-font: hsla(0, 0%, 14%, 1);
   --clr-background: hsla(30, 100%, 96%, 1);
   --clr-mainBG:hsla(49, 16%, 87%,1);
-  --clr-link: hsla(0, 0%, 11%, 1);
-  --clr-border: hsla(0, 0%, 23%, 1);
+  --clr-link: hsl(0, 0%, 11%);
+  --clr-border: hsla(0, 0%, 50%, 1);
   --clr-shade: hsla(0, 0%, 73%, 1);
   --clr-disabled: hsla(0, 0%, 50%, 1);
+  --pink: #ecb2ba;
+  --pink-dark: #c6939a;
+  --tape-gray: #dbd8be;
+  --tape-edge-gray: #b7b49d;
+  --transparent: rgba(255, 255, 255, 0);
   --mobile-max: 767px;
   --tablet: 768px;
   --desktop: 992px;
@@ -448,7 +549,9 @@ nav {
   background: var(--background);
   background: url("./assets/images/seamless_paper_texture.png");
   background-color: var(--clr-mainBG);
-  border-style: solid;
+  border-style: groove;
+  border-color: var(--clr-border);
+  border-radius: 1rem;
   border-width: var(--border-width);
   -o-border-image: url("./assets/images/button.svg") 10 stretch;
      border-image: url("./assets/images/button.svg") 10 stretch;
@@ -491,7 +594,8 @@ nav {
   background: var(--background);
   background: url("./assets/images/seamless_paper_texture.png");
   background-color: var(--clr-mainBG);
-  border-style: solid;
+  border-style: groove;
+  border-radius: 1rem;
   border-width: var(--border-width);
   -o-border-image: url("./assets/images/button.svg") 10 stretch;
      border-image: url("./assets/images/button.svg") 10 stretch;
@@ -736,31 +840,123 @@ header::after {
   grid-area: intro_prologue;
 }
 
+.stickynote_default {
+  --paper-color: hsla(30, 100%, 96%, 0.897);
+  --paper-dark: hsla(0, 0%, 50%, 0.205);
+  --shadow-size: 3px;
+  --transparent: hsla(222, 74%, 91%, 0.116);
+}
+
+.paper {
+  padding: 3rem;
+  position: relative;
+  background: var(--background);
+  background: url("./assets/images/seamless_paper_texture.png");
+  background-color: var(--clr-mainBG);
+  min-height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
+}
+
+.paper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--transparent), 50%, var(--paper-dark), 51%, var(--transparent)), linear-gradient(to right, var(--transparent), 50%, var(--paper-dark), 51%, var(--transparent));
+}
+
+.tape-section {
+  position: absolute;
+  width: 100%;
+}
+
+.top-tape {
+  position: absolute;
+  height: 2rem;
+  top: -1rem;
+  width: calc(100% + 3rem);
+  background-color: var(--tape-gray);
+  border-right: 2px dotted var(--tape-edge-gray);
+  border-left: 2px dotted var(--tape-edge-gray);
+  opacity: 0.7;
+}
+
+.tape-section:first-of-type {
+  top: 0;
+}
+
+.tape-section:last-of-type {
+  bottom: 0;
+}
+
+.tape-section::before,
+.tape-section::after {
+  content: "";
+  width: 10vmin;
+  height: 4vmin;
+  position: absolute;
+  background-color: var(--tape-gray);
+  opacity: 0.7;
+  border-right: 1px dotted var(--tape-edge-gray);
+  border-left: 1px dotted var(--tape-edge-gray);
+}
+
+.tape-section:last-of-type::after {
+  transform: rotate(-45deg);
+  right: -4vmin;
+  top: -3vmin;
+}
+
+.tape-section:first-of-type::before {
+  transform: rotate(-45deg);
+  left: -4vmin;
+}
+
+.tape-section:first-of-type::after {
+  transform: rotate(45deg);
+  right: -4vmin;
+  top: 0;
+}
+
+.tape-section:last-of-type::before {
+  transform: rotate(45deg);
+  left: -4vmin;
+  bottom: 0;
+}
+
 .skills {
-  margin-inline: 3rem;
+  padding: 3rem;
+  margin: 3rem;
   align-items: center;
   align-content: center;
+  background: var(--background);
+  background: url("./assets/images/seamless_paper_texture.png");
+  background-color: var(--clr-mainBG);
+  filter: brightness(1.05);
+  border-style: solid;
+  border-width: var(--border-width);
+  -o-border-image: url("./assets/images/button.svg") 10 stretch;
+     border-image: url("./assets/images/button.svg") 10 stretch;
+  --shadow:var( --shadow-4,
+  0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+  0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+  0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+  0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+  0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+  0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
+  box-shadow: var(--shadow);
 }
 
 .skills-container {
-  margin-inline: 3rem;
-  display: grid;
-  grid-gap: 11rem;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .skill-category {
   list-style-type: circle;
-  --c: 50px;
-  --p: 30px;
-  --d: 10px;
-  display: inline-block;
-  padding: var(--p);
-  background: radial-gradient(farthest-side at 0 0, #000, rgba(0, 0, 0, 0)) 0 0/var(--c) var(--c), radial-gradient(farthest-side at 100% 100%, #000, rgba(0, 0, 0, 0)) 100% 100%/var(--c) var(--c), linear-gradient(rgba(255, 255, 255, 0.9254901961) 0 0) 50% 50%/calc(100% - var(--p)) calc(100% - var(--p)), linear-gradient(rgba(0, 0, 0, 0), #000 25% 75%, rgba(0, 0, 0, 0)) 50% 50%/calc(100% - var(--p)) calc(100% - var(--d)), linear-gradient(90deg, rgba(0, 0, 0, 0), #000 25% 75%, rgba(0, 0, 0, 0)) 50% 50%/calc(100% - var(--d)) calc(100% - var(--p)), radial-gradient(farthest-side at 0 100%, rgba(0, 0, 0, 0.0941176471), rgba(0, 0, 0, 0)) calc(100% - var(--d) * 0.5) calc(var(--d) * 0.5)/var(--d) var(--d), radial-gradient(farthest-side at 100% 0, rgba(0, 0, 0, 0.0941176471), rgba(0, 0, 0, 0)) calc(var(--d) * 0.5) calc(100% - var(--d) * 0.5)/var(--d) var(--d);
-  filter: brightness(0.99);
-  background-repeat: no-repeat;
-  -webkit-clip-path: polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
-          clip-path: polygon(0 var(--c), var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%);
 }
 .skill-category h2 {
   padding-bottom: 1rem;
@@ -777,7 +973,7 @@ header::after {
 .intro-section {
   display: flex;
   justify-content: center;
-  margin-block: 3rem;
+  margin-block: 5rem;
 }
 .intro-section .intro-wrapper {
   display: flex;
@@ -787,26 +983,50 @@ header::after {
   width: fit-content;
 }
 .intro-section .intro_proto {
+  min-height: 15rem;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
   margin: 3rem;
 }
 .intro-section .intro_prologue {
-  background: url("./assets/images/seamless_paper_texture.png");
-  filter: brightness(1.15);
-  border-style: solid;
-  border-width: var(--border-width);
-  -o-border-image: url("./assets/images/button.svg") 10 stretch;
-     border-image: url("./assets/images/button.svg") 10 stretch;
-  --shadow:var( --shadow-4,
-  0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-  0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-  0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-  0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-  0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-  0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
-  box-shadow: var(--shadow);
   padding: 1.75rem;
+  background: url("./assets/images/seamless_paper_texture.png");
+  background-color: var(--clr-mainBG);
+  background-color: hsla(0, 0%, 100%, 0.925);
+  filter: brightness(1.15);
+}
+.intro-section .intro_prologue h1 {
+  margin-block-end: 2rem;
+  color: var(--clr-font);
+  font-size: var(--font-size-fluid-2);
+}
+.intro-section .intro_prologue div {
+  margin-block: 2rem;
+  font-size: var(--font-size-fluid-3);
+}
+.intro-section .intro_prologue p {
+  line-height: 4rem;
+  font-size: var(--font-size-fluid-1);
+}
+
+.bubble {
+  position: relative;
   text-align: center;
+  color: #000;
+  padding: 21px;
+  box-shadow: 0 -7px #fff, 0 -14px #000, 7px 0 #fff, 7px -7px #000, 14px 0 #000, 0 7px #fff, 0 14px #000, -7px 0 #fff, -7px 7px #000, -14px 0 #000, -7px -7px #000, 7px 7px #000;
+  box-shadow: 0 -7px #fff, 0 -14px #000, 7px 0 #fff, 7px -7px #000, 14px 0 #000, 0 7px #fff, 0 14px #000, -7px 0 #fff, -7px 7px #000, -14px 0 #000, -7px -7px #000, 7px 7px #000, 7px 21px rgba(0, 0, 0, 0.1), 21px 7px rgba(0, 0, 0, 0.1), 14px 14px rgba(0, 0, 0, 0.1);
+}
+.bubble::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  height: 7px;
+  width: 7px;
+  top: 35px;
+  left: -14px;
+  background: white;
+  box-shadow: -7px -7px #fff, -7px 0 #fff, -14px 0 #fff, 0 -14px #fff, -7px 7px #000, -14px 7px #000, -21px 7px #000, -28px 7px #000, -21px 0 #000, -14px -7px #000, -7px -14px #000, 0 -7px #fff;
 }
 
 .abouthim-section {
@@ -825,10 +1045,8 @@ header::after {
 }
 
 .abouthim_message {
-  width: 59ch;
+  width: 85ch;
   background: var(--background);
-  background: url("./assets/images/seamless_paper_texture.png");
-  background-color: var(--clr-mainBG);
   filter: brightness(1.15);
   border-style: solid;
   border-width: var(--border-width);
@@ -873,4 +1091,81 @@ header::after {
   filter: drop-shadow(3px 3px 2px #222);
   transition: transform 10ms;
   transform: scale(0.9);
+}
+
+.projects {
+  margin: 0 auto; /* Center the section */
+  padding: 3rem;
+  margin: 3rem;
+  align-items: center;
+  align-content: center;
+  background: var(--background);
+  background: url("./assets/images/seamless_paper_texture.png");
+  background-color: var(--clr-mainBG);
+  filter: brightness(1.05);
+  border-style: solid;
+  border-width: var(--border-width);
+  -o-border-image: url("./assets/images/button.svg") 10 stretch;
+     border-image: url("./assets/images/button.svg") 10 stretch;
+  --shadow:var( --shadow-4,
+  0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+  0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+  0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+  0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+  0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+  0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
+  box-shadow: var(--shadow);
+}
+
+.skills-container {
+  /* Optionally, you can center the skills container within the section */
+  margin: 0 auto;
+}
+
+.portfolio-scroller {
+  background-color: red;
+  --_spacer: var(--size-3);
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  padding: 0 var(--_spacer) var(--_spacer);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-scroller {
+  --_spacer: 3rem;
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  padding: 0 var(--_spacer) var(--_spacer);
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-element {
+  margin-top: var(--_spacer);
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--_spacer);
+  padding: var(--_spacer);
+  box-shadow: var(--shadow-5);
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
 }/*# sourceMappingURL=main.css.map */

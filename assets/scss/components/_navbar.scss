@@ -18,7 +18,9 @@ nav {
 	background: var(--background);
 	background: variables.$image-background-texture;
 	background-color: var(--clr-mainBG);
-	border-style: solid;
+	border-style: groove;
+	border-color: var(--clr-border);
+	border-radius: 1rem;
 	border-width: var(--border-width);
 	border-image: variables.$image-border-button;
 	background-blend-mode:multiply;
@@ -61,7 +63,8 @@ nav {
 		background: variables.$image-background-texture;
 		background-color: var(--clr-mainBG);
 		// position: relative;
-		border-style: solid;
+		border-style: groove;
+		border-radius: 1rem;
 		border-width: var(--border-width);
 		border-image: variables.$image-border-button;
 		background-blend-mode:multiply;

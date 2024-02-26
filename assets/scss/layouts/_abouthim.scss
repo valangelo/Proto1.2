@@ -4,9 +4,10 @@
 .abouthim-section{
 	display: flex;
 	justify-content: center;
+
 }
 .vscodeIcon{display: inline;}
-.abouthim-wrapper{
+.abouthim-wrapper{	
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -15,10 +16,11 @@
 
 
 .abouthim_message {
-	width: 59ch;
+	
+	width: 85ch;
 	background: var(--background);
-    background: variables.$image-background-texture;
-    background-color: var(--clr-mainBG);
+    // background: variables.$image-background-texture;
+    // background-color: var(--clr-mainBG);
 	filter: brightness(1.15);
     border-style: solid;
     border-width: var(--border-width);

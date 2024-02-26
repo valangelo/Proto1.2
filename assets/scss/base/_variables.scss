@@ -2,6 +2,8 @@
 	$asset-path: "./assets/images/";
 	$image-border-border: url("#{$asset-path}border.svg") 10 stretch;
 	$image-border-button: url("#{$asset-path}button.svg") 10 stretch;
+	// $image-border-border: url("#{$asset-path}border.svg") 10 stretch;
+	// $image-border-button: url("#{$asset-path}button.svg") 10 stretch;
 	$image-background-texture:url("#{$asset-path}seamless_paper_texture.png");
 	// https://github.com/argyleink/open-props
 
@@ -15,11 +17,17 @@
 	--clr-font: hsla(0, 0%, 14%, 1);
 	--clr-background: hsla(30, 100%, 96%, 1);
 	--clr-mainBG:hsla(49, 16%, 87%,1);
-	--clr-link: hsla(0, 0%, 11%, 1);
-	--clr-border: hsla(0, 0%, 23%, 1);
+	--clr-link: hsl(0, 0%, 11%);
+	--clr-border: hsla(0, 0%, 50%, 1);
 	--clr-shade: hsla(0, 0%, 73%, 1);
 	--clr-disabled: hsla(0, 0%, 50%, 1);
-  
+
+	--pink: #ecb2ba;
+    --pink-dark: #c6939a;
+    --tape-gray: #dbd8be;
+    --tape-edge-gray: #b7b49d;
+    --transparent: rgba(255, 255, 255, 0);
+
 	// Breakpoints
 	--mobile-max: 767px;
 	--tablet: 768px;
