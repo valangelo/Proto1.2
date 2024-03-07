@@ -1,72 +1,112 @@
 @use '../base/variables';
 
+$aboutme_image__width: 250px;
 
-.abouthim-section{
-	display: flex;
-	justify-content: center;
-
-}
-.vscodeIcon{display: inline;}
-.abouthim-wrapper{	
-	display: flex;
-    justify-content: center;
-    align-items: center;
-   
+.abouthim-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.abouthim-wrapper {
+  width: 80vw;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto $aboutme_image__width;
+  gap: 3rem;
+
+  background: var(--background); // Uncomment or modify based on your design
+  background: variables.$image-background-texture; // Uncomment or modify based on your design
+  background-color: var(--clr-mainBG);
+  border-style: solid;
+  border-width: var(--border-width);
+  border-image: variables.$image-border-button;
+  border-radius: 1rem;
+  // --shadow: var(--shadow-5);
+  box-shadow: var(--shadow-4);
+}
+
+.custom_Emoticon {
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  display: inline;
+  cursor: pointer;
+  transition: transform 200ms;
+  &:hover{
+    transition-delay: 500ms;
+	transform: scale(3);
+  }
+}
+.custom_emoticon__3d:hover {
+	transform: scale(3);
+  
+}
 
 .abouthim_message {
-	
-	width: 85ch;
-	background: var(--background);
-    // background: variables.$image-background-texture;
-    // background-color: var(--clr-mainBG);
-	filter: brightness(1.15);
-    border-style: solid;
-    border-width: var(--border-width);
-    border-image: variables.$image-border-button;
-	--shadow:var( --shadow-4,
-	0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-	0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-	0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-	0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-	0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-	0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
-	box-shadow: var(--shadow);
-	
-}
-.abouthim_image{
+  padding: 1rem;
+  
 
-    height: 250px;
-    width:  250px;
-	transform: scale(1);
-	// transition: filter 100ms, transform 200ms;
-	filter: drop-shadow(10px 10px 10px #222);
-	-webkit-filter: drop-shadow(10px 10px 20px #222);
-	// outline: 1px solid red;
-}
-.abouthim_image::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	// box-sizing: border-box;
-	// border: 2px solid red; /* Initial border styling */
-	opacity: 1; /* Initially transparent */
+  h1 {
+    font-weight: normal;
+    &:last-of-type {
+      margin-block-end: 2rem;
+    }
   }
+
+  h2 {
+	cursor: pointer;
+    padding-block-end: 1.5rem;
+    font-family: 'Mynerve';
+    font-weight: bold;
+    font-size: var(--font-size-fluid-2);
+  }
+
+  li {
+    margin: 1.25rem;
+  }
+
+  span {
+    font-family: 'Mynerve';
+    font-weight: bold;
+    font-size: var(--font-size-fluid-2);
+  }
+
+  h3 {
+    padding: 1rem;
+    font-family: 'GloriaHallelujah';
+    font-weight: bold;
+    font-size: var(--font-size-fluid-1);
+  }
+}
+
+.abouthim_image {
+  height: 250px;
+  width: $aboutme_image__width;
+  transform: scale(1);
+  filter: drop-shadow(10px 10px 10px #222); -webkit-filter: drop-shadow(10px 10px 20px #222);
+}
+
+.abouthim_image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
 .abouthim_image:hover {
-	filter: drop-shadow(7px 7px 7px #222);
-	-webkit-filter: drop-shadow(7px 7px 7px #222);
-	transform: scale(.95);
-	transition: transform 200ms;
-}
-.abouthim_image:active{
-	-webkit-filter: drop-shadow(3px 3px 3px #222);
-	filter: drop-shadow(3px 3px 2px #222);
-	transition: transform 10ms; 
-	transform: scale(0.90);
+  filter: drop-shadow(7px 7px 7px #222);
+  -webkit-filter: drop-shadow(7px 7px 7px #222);
+  transform: scale(.95);
+  transition: transform 200ms;
 }
 
-
+.abouthim_image:active {
+  -webkit-filter: drop-shadow(3px 3px 3px #222);
+  filter: drop-shadow(3px 3px 2px #222);
+  transition: transform 10ms;
+  transform: scale(0.90);
+}

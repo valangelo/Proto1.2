@@ -1,46 +1,47 @@
-// _typography.scss
 
+// _typography.scss
+$font-path :"/assets/fonts/";
 // Import variables
 @use '../base/_variables';
 @font-face {
   font-family: 'Amatic SC';
-  src: url('/assets/fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype'),
-       url('/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf') format('truetype');
+  src: url('#{$font-path}Amatic_SC/AmaticSC-Regular.ttf') format('truetype'),
+       url('#{$font-path}Amatic_SC/AmaticSC-Bold.ttf') format('truetype');
   font-weight: normal; /* Corresponds to the regular font file */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Caveat';
-  src: url('/static/Caveat-Regular.ttf') format('truetype');
+  src: url('#{$font-path}Caveat/static/Caveat-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Caveat';
-  src: url('/static/Caveat-Bold.ttf') format('truetype');
+  src: url('#{$font-path}Caveat/static/Caveat-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Caveat';
-  src: url('/static/Caveat-Medium.ttf') format('truetype');
+  src: url('#{$font-path}Caveat/static/Caveat-Medium.ttf') format('truetype');
   font-weight: 500; /* Medium weight */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Caveat';
-  src: url('/static/Caveat-SemiBold.ttf') format('truetype');
+  src: url('#{$font-path}Caveat/static/Caveat-SemiBold.ttf') format('truetype');
   font-weight: 600; /* Semi-bold weight */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Caveat';
-  src: url('/static/Caveat-VariableFont_wght.ttf') format('truetype');
+  src: url('#{$font-path}Caveat/static/Caveat-VariableFont_wght.ttf') format('truetype');
   font-weight: 1 999; /* Variable font weight range */
   font-style: normal;
 }
@@ -48,69 +49,90 @@
 
 @font-face {
   font-family: 'GloriaHallelujah';
-  src: url('/assets/fonts/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf') format('truetype');
+  src: url('#{$font-path}Gloria_Hallelujah/GloriaHallelujah-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Mansalva';
-  src: url('/assets/fonts/Mansalva/Mansalva-Regular.ttf') format('truetype');
+  src: url('#{$font-path}Mansalva/Mansalva-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Mynerve';
-  src: url('/assets/fonts/Mynerve/Mynerve-Regular.ttf') format('truetype');
+  src: url('#{$font-path}Mynerve/Mynerve-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Pacifico';
-  src: url('/assets/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+  src: url('#{$font-path}Pacifico/Pacifico-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Shadows into Light';
-  src: url('/assets/fonts/Shadows_into_Light/ShadowsintoLight-Regular.ttf') format('truetype');
+  src: url('#{$font-path}Shadows_into_Light/ShadowsintoLight-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-
+@font-face {
+  font-family: 'Short Stack';
+  src: url('#{$font-path}Short_Stack/ShortStack-Regular.ttf') format('truetype');
+  font-weight: 1 999;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('#{$font-path}Roboto/Roboto-Regular.ttf') format('truetype');
+}
 
 // tested if fonts working
 body {
-  // font-family: GloriaHallelujah;
-  font-family: 'Short Stack';
+  font-family:"Amatic SC";
+  // font-family: 'Short Stack';
 }
 h1{
-  font-family: 'Short Stack';
+  font-family: 'Caveat';
+  font-weight: bold;
 }
 h2{
-  font-family: 'System Ui';
+  font-family: 'Caveat';
 }
-li{
-  // font-family: 'Short Stack';
-  //  
-}
+// li{
+//   font-family: 'Short Stack';
+//   //  
+// }
 p{
   font-family: 'Short Stack';
   font-weight: bold;
 }
-span{
-  font-family: 'Mansalva';
+
+.proto{
+  font-family: "Mynerve";
   font-weight: bold;
 }
-
-.custom_Emoticon {
-  width: 2rem;
-  margin-inline: .25rem;
-  display: inline;  
+.intro_prologue {
+  h1{
+  font-weight:bold;
+  }
+  h2{
+    text-transform: capitalize;
+    font-family: "Short Stack";
+    font-weight: bold;
+    font-size: var(--font-size-fluid-2);
+  }
+  p{
+  font-family: "GloriaHallelujah";
+  font-weight: 100;
+  }
 }
+
 
 strong {
   font-weight: bold;
@@ -118,7 +140,7 @@ strong {
 
 .nav_links{
   font-size: 1.75em;
-  font-family: 'Mansalva';
+  // font-family: 'Mansalva';
   font-weight: bold;
 }
 

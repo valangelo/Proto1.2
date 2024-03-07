@@ -2,19 +2,19 @@
 
 
 // console.log("test");
-function pauseEvent(e) {
-    if (e.stopPropagation) e.stopPropagation();
-    if (e.preventDefault) e.preventDefault();
-    e.cancelBubble = true;
-    e.returnValue = false;
-    return false;
-}
+// function pauseEvent(e) {
+//     if (e.stopPropagation) e.stopPropagation();
+//     if (e.preventDefault) e.preventDefault();
+//     e.cancelBubble = true;
+//     e.returnValue = false;
+//     return false;
+// }
 
 // $('body').scrollspy({ target: '#main-navbar' });
 
 
-const currentYear = new Date().getFullYear();
-document.getElementById('current-year').textContent = currentYear;
+// const currentYear = new Date().getFullYear();
+// document.getElementById('current-year').textContent = currentYear;
 
 
 // window.addEventListener("scroll", setScrollVar)

@@ -17,8 +17,10 @@
 //   <figcaption>Test</figcaption>
 // </figure>
 .skills {
-    padding: 3rem;
-    margin: 3rem;
+    width: 80vw;
+    padding: var(--layout-padding);
+    margin-inline: auto;
+    margin-block: var(--layout-padding);
     // text-align: center;
     align-items: center;
     align-content: center;
@@ -26,7 +28,7 @@
     background: var(--background);
     background: variables.$image-background-texture;
     background-color: var(--clr-mainBG);
-	filter: brightness(1.05);
+	// filter: brightness(1.05);
     border-style: solid;
     border-width: var(--border-width);
     border-image: variables.$image-border-button;
@@ -40,6 +42,10 @@
 	box-shadow: var(--shadow);
 	
 }
+.skills_heading_wrapper{
+    margin-block-end: var(--layout-padding);
+
+}
 .skills-container{
     // margin-inline: 3rem;
     // display: grid;
@@ -51,6 +57,7 @@
 .skill-category {
     list-style-type: circle;
     h2{
+        font-size: var(--font-size-fluid-2);
         padding-bottom: 1rem;
     }
     ul{
@@ -58,7 +65,8 @@
         margin-bottom: 1rem;
         padding-inline: 1.5rem;
         li{
-            // color:red;
+            font-family: "Short Stack";
+            font-size: var(--font-size-fluid-1);
             list-style-type: circle;
         }
     }

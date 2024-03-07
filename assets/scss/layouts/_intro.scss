@@ -1,5 +1,6 @@
 @use '../base/variables';
 .intro-section {
+	position: relative;
     display: flex;
     justify-content: center;
     margin-block:5rem ;
@@ -11,6 +12,9 @@
 		
     }
     .intro_proto {
+		position: sticky;
+		top: 0; /* Add this line */
+		// position: relative;
         min-height: 15rem;
         filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
         margin: 3rem;

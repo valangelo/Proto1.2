@@ -1,49 +1,71 @@
 @use "../base/_variables";
+
+
+
+
 ::-webkit-scrollbar {
 	background-color: antiquewhite;
 	background-image: variables.$image-background-texture;
-	width: 30px;
+	width: 2.5rem;
+	overflow: auto;
+	padding: 1em;
+	margin: 1em;
+	// outline: 2px dashed cornflowerblue;
+	// box-shadow: inset;
 }
+
+
 ::-webkit-scrollbar-button {
-	/* 2 */
+	
+	// height: 5vh;
+	// width: 5vw;
+	cursor: pointer;
 	&:single-button {
-		height: 5vh;
-		// background-color: red;
-		cursor: pointer;
-		// border-style: solid;
 		&:vertical:decrement {
 			// background-color: red;
-
 			background-image: url("#{variables.$asset-path}arrowup.svg");
 		}
 		&:vertical:increment {
 			background-image: url("#{variables.$asset-path}arrowdown.svg");
 		}
+      
+      
 	}
 }
 ::-webkit-scrollbar-track {
+	// background-color: yellow;
 	/*3*/
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
+	border-radius: 50px;
+	border: 2px groove grey;
+	-webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
 }
 ::-webkit-scrollbar-track-piece {
 	/* 4 */
+	// background-color: red;
 }
 ::-webkit-scrollbar-thumb {
 	/* 5 */
-
+	border-radius: 50px;
 	background-clip: content-box;
 	background-image: url("#{variables.$asset-path}pencilclipart.svg");
 	background-size: 100% auto;
-	text-shadow: 2px 2px 5px grey;
+	z-index: -1;
+
 }
 ::-webkit-scrollbar-corner {
-	/* 6 */
+    background: transparent;
+    width: 0;
+    height: 0;
+	border: none;
+	display: none;
+	visibility: hidden;
+	background-color: unset;
 }
 ::-webkit-resizer {
 	/* 7 */
+	display: none;
 }

@@ -4,6 +4,7 @@ body {
 	background-color: var(--clr-mainBG);
 	background: variables.$image-background-texture;
 	color:var(--clr-font);
+	user-select: none;
 }
 
 
@@ -340,9 +341,9 @@ header{
 }
 
 
-.intro_proto{
-grid-area: intro_proto;
-}
-.intro_prologue{
-	grid-area:intro_prologue
-}
+// .intro_proto{
+// grid-area: intro_proto;
+// }
+// .intro_prologue{
+// 	grid-area:intro_prologue
+// }
