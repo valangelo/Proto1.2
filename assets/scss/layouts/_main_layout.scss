@@ -48,51 +48,6 @@ body {
 #portfolio > * {
 	scroll-snap-align: start;
 }
-// h1 {
-// 	// font-family: "Nanum Pen Script";
-// 	font-size: 45px;
-// 	padding: 5px 0px;
-// }
-// p {
-// 	padding: 5px 0px;
-// 	font-size: 22px;
-// }
-// // prevent draging and drop of image
-// img:active {
-// 	pointer-events: none;
-// }
-// @media (max-width: 768px) {
-// 	.valiw {
-// 		// background-color: red;
-// 		height: 150px;
-// 		width: 150px;
-// 	}
-// 	nav::before,
-// 	nav::after {
-// 		visibility: hidden;
-// 	}
-// 	.card-body,
-// 	.card-title,
-// 	.card-text {
-// 		// background-color: red;
-// 		font-size: 1rem !important;
-// 	}
-// }
-// @media (max-width: 576px) {
-// 	.card-body,
-// 	.card-title,
-// 	.card-text {
-// 		// background-color: red;
-// 		font-size: 2rem !important;
-// 	}
-// }
-// html,
-// body {
-// 	padding: 15px;
-// 	-webkit-user-select: none; /* Safari */
-// 	-ms-user-select: none; /* IE 10 and IE 11 */
-// 	user-select: none; /* Standard syntax */
-// }
 .htmlwrapper{
 	// font-family: "Nanum Pen Script";
 	// color: var(--clr-font);
@@ -175,6 +130,9 @@ header{
 		content: "</abouthim>";
 	}
 }
+
+
+
 // html::before,
 // html::after,
 // body::before,
@@ -318,14 +276,14 @@ header{
 // }
 
 
-.content-wrapper {
+// .content-wrapper {
 	// display: grid;
 	// grid-template-rows: repeat(1, 1fr); 
 	// grid-template-areas: 
 	// ". intro-proto intro-prologue."
 	// ;
 	// grid-gap: 20px; /* Adjust the gap between columns */	
-}
+// }
 // .intro-wrapper{
 // 	grid-template-columns: repeat(2, 1fr); 
 // 	// grid-template-columns: subgrid;

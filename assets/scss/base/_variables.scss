@@ -1,7 +1,10 @@
+	// _variables.scss
+	
 	// Asset Paths
 	$asset-path: "./assets/images/";
 	$image-border-border: url("#{$asset-path}border.svg") 10 stretch;
 	$image-border-button: url("#{$asset-path}button.svg") 10 stretch;
+	$image-pin: url("#{$asset-path}pinnormal.png") stretch stretch;
 	// $image-border-border: url("#{$asset-path}border.svg") 10 stretch;
 	// $image-border-button: url("#{$asset-path}button.svg") 10 stretch;
 	$image-background-texture:url("#{$asset-path}seamless_paper_texture.png");
@@ -89,7 +92,7 @@
 	--layout-padding: 3rem;
 	--border-width: 10px;     // Default border width
 	--border-radius: 4px;    // Default border radius
-  
+  	
 	// Box Shadow
 	--box-shadow: 0px 0px 10px 4px var(--clr-disabled),
 				   -4px -6px 15px 4px var(--clr-disabled),
@@ -99,7 +102,7 @@
   
   // Shadow
 	--shadow-color: 220 3% 15%;
-	--shadow-strength: 10%;
+	--shadow-strength: 15%;
 	--inner-shadow-highlight: inset 0 -.5px 0 0 #fff, inset 0 .5px 0 0 #0001;
 	--shadow-1: 0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
 	--shadow-2: 
@@ -126,13 +129,13 @@
 	  0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
 	  0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
 	--shadow-6: 
-	  0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-	  0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-	  0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-	  0 12px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-	  0 22px 18px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-	  0 41px 33px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
-	  0 100px 80px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+	  0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+	  0 3px 2px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
+	  0 7px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
+	  0 12px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 8%)),
+	  0 22px 18px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 10%)),
+	  0 41px 33px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 12%)),
+	  0 100px 80px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 14%));
 	--inner-shadow-0: inset 0 0 0 1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
 	--inner-shadow-1: inset 0 1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
 	--inner-shadow-2: inset 0 1px 4px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);

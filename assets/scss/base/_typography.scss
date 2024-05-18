@@ -1,8 +1,5 @@
-
-// _typography.scss
+// _typohraphy.scss
 $font-path :"/assets/fonts/";
-// Import variables
-@use '../base/_variables';
 @font-face {
   font-family: 'Amatic SC';
   src: url('#{$font-path}Amatic_SC/AmaticSC-Regular.ttf') format('truetype'),
@@ -41,7 +38,7 @@ $font-path :"/assets/fonts/";
 
 @font-face {
   font-family: 'Caveat';
-  src: url('#{$font-path}Caveat/static/Caveat-VariableFont_wght.ttf') format('truetype');
+  src: url('#{$font-path}Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
   font-weight: 1 999; /* Variable font weight range */
   font-style: normal;
 }

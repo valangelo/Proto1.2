@@ -1,27 +1,23 @@
-@use '../base/variables';
+// _abouthim.scss
+@use "../base/_variables" as variables;
 
 $aboutme_image__width: 250px;
 
 .abouthim-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.abouthim-wrapper {
-  width: 80vw;
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto $aboutme_image__width;
-  gap: 3rem;
-
-  background: var(--background); // Uncomment or modify based on your design
-  background: variables.$image-background-texture; // Uncomment or modify based on your design
-  background-color: var(--clr-mainBG);
-  border-style: solid;
+  margin-inline: auto;
+  margin-block: 2rem;
+  border-style: groove;
   border-width: var(--border-width);
+  border-color: #222;
   border-image: variables.$image-border-button;
   border-radius: 1rem;
+
+  background-color: var(--clr-mainBG);
+	background: variables.$image-background-texture;
+  background-blend-mode:lighten;
+  width: 80vw;
+  grid-template-columns: auto $aboutme_image__width;
   // --shadow: var(--shadow-5);
   box-shadow: var(--shadow-4);
 }
@@ -62,8 +58,22 @@ $aboutme_image__width: 250px;
     font-size: var(--font-size-fluid-2);
   }
 
+  ul{
+    position: relative;
+  }
   li {
+    
     margin: 1.25rem;
+    // list-style: circle;
+    &::before{
+      content: "-";
+      font-size: var(--font-size-fluid-2);
+      font-weight: bold;
+      position: absolute;
+      left:  0;
+      // top:0;
+    }
+
   }
 
   span {
@@ -84,7 +94,8 @@ $aboutme_image__width: 250px;
   height: 250px;
   width: $aboutme_image__width;
   transform: scale(1);
-  filter: drop-shadow(10px 10px 10px #222); -webkit-filter: drop-shadow(10px 10px 20px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
 }
 
 .abouthim_image::before {

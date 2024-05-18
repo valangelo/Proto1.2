@@ -2,405 +2,451 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!-- Primary Meta Tags -->
-	<title>Proto Angelo's First Portfolio</title>
-	<meta name="title" content="Proto Angelo's First Portfolio" />
-	<meta name="description" content="Take your time exploring what he has createdfor you. Enjoy the tour!" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Primary Meta Tags -->
+  <title>Proto Angelo's First Portfolio</title>
+  <meta name="title" content="Proto Angelo's First Portfolio" />
+  <meta name="description" content="Take your time exploring what he has createdfor you. Enjoy the tour!" />
 
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://webprofile-theta.vercel.app/" />
-	<meta property="og:title" content="Proto Angelo's First Portfolio" />
-	<meta property="og:description" content="Take your time exploring what he has createdfor you.
-
-Enjoy the tour!" />
-	<meta property="og:image" content="./assets/images/metapreview.webp" />
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://valangelo.github.io/webprofile/" />
-	<meta property="twitter:title" content="Proto Angelo's First Portfolio" />
-	<meta property="twitter:description" content="Take your time exploring what he has createdfor you.
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://webprofile-theta.vercel.app/" />
+  <meta property="og:title" content="Proto Angelo's First Portfolio" />
+  <meta property="og:description" content="Take your time exploring what he has createdfor you.
 
 Enjoy the tour!" />
-	<meta property="twitter:image" content="./assets/images/metapreview.webp" />
-	<meta name="robots" content="index, follow" />
+  <meta property="og:image" cindex.htmlontent="./assets/images/metapreview.webp" />
 
-	<!-- Cross Browser icon (i hope it works) -->
-	<link rel="shortcut icon" href="./assets/images/VAV.ico" />
-	<link rel="icon" type="image/vnd.microsoft.icon" href="./assets/images/VAV.ico" />
-	<link rel="icon" type="image/x-icon" href="./assets/images/VAV.ico" />
-	<link rel="icon" href="./assets/images/VAV.ico" />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://valangelo.github.io/webprofile/" />
+  <meta property="twitter:title" content="Proto Angelo's First Portfolio" />
+  <meta property="twitter:description" content="Take your time exploring what he has createdfor you.
 
-	<!-- Typography -->
-	<!-- Moved this to typography.scss -->
-	<!-- i used @import instead of link -->
-	<!-- <link
-			rel="preconnect"
-			href="https://fonts.googleapis.com" />
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?
-            family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Caveat&family=Gloria+Hallelujah&
-            family=Nanum+Pen+Script&family=Short+Stack&display=swap"
-			rel="stylesheet" /> -->
-	<!-- /Typography -->
+Enjoy the tour!" />
+  <meta property="twitter:image" content="./assets/images/metapreview.webp" />
+  <meta name="robots" content="index, follow" />
 
-<!-- Custom Css -->
-<link rel="stylesheet" href="./main.css">
-<noscript>
-<!-- Fallback for users with disabled JavaScript -->
-<link rel="stylesheet" href="./main.css">
-</noscript>
+  <!-- Cross Browser icon (i hope it works) -->
+  <link rel="shortcut icon" href="./assets/images/VAV.ico" />
+  <link rel="icon" type="image/vnd.microsoft.icon" href="./assets/images/VAV.ico" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/VAV.ico" />
+  <link rel="icon" href="./assets/images/VAV.ico" />
 
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="./main.css">
+  <noscript>
+    <!-- Fallback for users with disabled JavaScript -->
+    <link rel="stylesheet" href="./main.css">
+  </noscript>
 
 </head>
 
 <body class="doodle">
-	<!-- Navbar -->
+  <div class="htmlwrapper">
+    <main class="mainwrapper" id="home">
+      <!--Navbar -->
+      <nav>
+        <div id="navbar" class="navbar">
+          <label class="nav-label" for="nav-toggle">
+            <img src="./assets/images/VAV.svg" alt="">
+            <h1 class="logo">Val Angelo Valencia</h1>
 
-	<div class="navbar doodle-border">
-		<div class="screen-size-indicator"></div>
+          </label>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
+          <ul class="nav_links">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#abouthim-section">About</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <!-- <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label> -->
+        </div>
+      </nav>
 
-		<input type="checkbox" id="nav-check">
+      <div class="content-wrapper">
 
-		<div class="nav-header">
-		  <div class="nav-title">
-			JoGeek
-		  </div>
-		</div>
-		<div class="nav-btn">
-		  <label for="nav-check">
-			<span></span>
-			<span></span>
-			<span></span>
-		  </label>
-		</div>
-		
-		<div class="nav-links">
-		  <a href="#abouthim" target="_blank">Github</a>
-		  <a href="" target="_blank">Stackoverflow</a>
-		  <a href="" target="_blank">LinkedIn</a>
-		  <a href="" target="_blank">Codepen</a>
-		  <a href="" target="_blank">JsFiddle</a>
-		</div>
-	  </div>
+        <section class="intro-section ">
+          <div id="intro-wrapper" class="intro-wrapper">
 
-	  
-	<!-- Image and text -->
-	<!-- <nav class="doodle-border navbar" id="main-navbar">
-		
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-			aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">	
-			<span class="navbar-toggler-icon">
-				<img src="./assets/images/VAV.svg" width="30" height="30" class="d-inline-block align-top logoMobile" alt="VaV Logo" />
-		</span>
-		</button>
-		
-		<a class="navbar-brand" href="#"></a>
-			<img src="./assets/images/VAV.svg" width="30" height="30" class="d-inline-block align-top logoDesktop" alt="VaV Logo" /> 
-			Val Angelo Valencia
-		</a>
+            <img class="intro_proto" src="./assets/images/figure.svg" alt="">
 
-		
+            <div class="intro_prologue bubble">
+              <h1>Hey there! I'm
+                <span class="proto">PROTO</span>,
+              </h1>
+              <h2>introducing you to my creator's portfolio</h2>
+              <p>Take a stroll through what he's made and have fun checking out the cool stuff he's put together. It's
+                like a digital adventure waiting for your curiosity. Enjoy!
+              </p>
 
-		<div class="collapse navbar-collapse" id="navbarToggler">
-			<ul class="navbar-nav nav nav-pills ml-auto mt-2 mt-lg-0">
-				<li class="nav-item doodle-border">
-					<a class="nav-link" href="#landing" active>Home
-					</a>
-				</li>
-				<li class="nav-item doodle-border">
-					<a class="nav-link" href="#abouthim">About Him
-					</a>
-				</li>
-				<li class="nav-item doodle-border">
-					<a class="nav-link" href="#portfolio">Portfolio
-					</a>
-				</li>
-				<li class="nav-item doodle-border">
-					<a class="nav-link" href="#contacthim">Contact Him
-					</a>
-				</li>
-			</ul>
-		</div>
-	</nav> -->
-	<main>
-		<!-- Header -->
-		<div data-spy="scroll" data-target="#main-navbar" class="">
-			<div class="container" id="landing">
-				<div class="row doodle-border">
-					<div class="">
-						<img class="proto" src="./assets/images/figure.svg" alt="figure" />
-					</div>
-					<div class="">
-						<div class="div-home-text">
-							<p>Hi! Im Proto</p>
-							<h1>Angelo's First Portfolio.</h1>
-							<p>
-								Take your time exploring what he has created
-								for you.
-							</p>
-							<p>Enjoy the tour!</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-			<!-- End Of header -->
+              <!-- <h1>Hi! Im Proto,</h1> <div>Angelo's First Portfolio.</div> <p> Take your time exploring what he has created for you. </p> <p>Enjoy the tour!</p> -->
+            </div>
+          </div>
+        </section>
 
-<!-- About Him -->
-<section>
-  <div class="container" id="abouthim">
-    <div class="row flex-lg-row-reverse">
-      <div class="col-md-4 mt-5 pt-3 col-sm-2 diValiw">
-        <!-- <img class="img-fluid valiw" src="./assets/images/valiw.webp" alt="Angelo" /> -->
+        <section id="abouthim-section" class="abouthim-section">
+          <div class="abouthim-wrapper">
+            <div class="abouthim_message">
+              <h1>Greetings, Earthlings! Allow me to introduce:</h1>
+              <h2
+                title="My portfolio built with Sass, without relying on any framework, and experimenting with new CSS features">
+                Gelo_V2.1</h2>
+              <p>Meet the one and only:
+                <span>Angelo!</span>
+              </p>
+              <h3>Primary Functions:</h3>
+              <ul>
+                <li>
+                  <p>Master of Visual
+                    <img class="custom_Emoticon" src="/assets/images/vscode.svg" alt="Visual Studio"
+                      title="Visual Studio">
+                    Wizardry and storytelling shenanigans.
+                  </p>
+                </li>
+                <li>
+                  <p>Engages in recreational antics: conquering digital
+                    <a href="https://vero.co/nohuart" target="_blank"><img class="custom_Emoticon custom_emoticon__3d"
+                        src="/assets/images/camera.webp" alt="camera"
+                        title="If you're interested, check out some of my snapshots by clicking here."></a>
+                    realms, trekking terrestrial trails
+                    <img class="custom_Emoticon custom_emoticon__3d" src="/assets/images/mountain.webp" alt="mountain"
+                      title="I love camping and star-gazing with my girlfriend and my cats.">, and exploring liquidy
+                    wonders
+                    <img class="custom_Emoticon custom_emoticon__3d" src="/assets/images/beach.webp" alt="beach"
+                      title="It's fun to see them enjoy the ocean breeze and play with the sand.">.
+                  </p>
+                </li>
+
+                <li>
+                  <p>Gaming Enthusiast: Conqueror of
+                    <img class="custom_Emoticon" src="/assets/images/LoL_Icon_Rendered_Hi-Res.png" alt="">
+                    League of Legends,
+                    <img class="custom_Emoticon" src="/assets/images/arthas.png" alt="">
+                    World of Warcraft: Wrath of the Lich King, and the captivating worlds of
+                    <img class="custom_Emoticon" src="/assets/images/aloy.webp" alt="">
+                    Horizon: Zero Dawn and Horizon Forbidden West.
+                  </p>
+                </li>
+                <li>
+                  <p>The chief caretaker of three mischievous feline companions
+                    <span class="custom_Emoticon">&#128572;</span>
+                    Elliot, &#128008; Timmy, and the newest addition, the energetic &#128062; Natsu.
+                  </p>
+                </li>
+              </ul>
+              <p>Get ready to join the fun! Follow Angelo's escapades through the social laughter network below! 😊
+                &#128071;</p>
+
+            </div>
+
+            <div class="abouthim_image">
+              <img src="./assets/images/valiw.webp" alt="Angelo">
+            </div>
+          </div>
+        </section>
+
+        <section class="skills">
+
+          <div class="skills_heading_wrapper paper stickynote_default">
+            <!-- <div class="top-tape"></div> -->
+            <div class="tape-section"></div>
+            <h1>Skills</h1>
+            <div class="tape-section"></div>
+          </div>
+
+          <div class="skills_message">
+            <p>I also know that he has a wide range of skills and can communicate in different languages. Some of the
+              skills and languages he possesses include:</p>
+          </div>
+
+          <!-- Backend Development -->
+          <div class="skill-category backend">
+            <h2>Backend Development</h2>
+            <ul>
+              <li>MERN stack (MongoDB, Express.js, React.js, Node.js)</li>
+              <li>Mongoose ODM</li>
+              <li>MongoDB</li>
+              <li>NoSQL</li>
+              <li>Database Design</li>
+              <li>Express.js</li>
+              <li>Node.js</li>
+            </ul>
+          </div>
+
+          <!-- Frontend Development & Design -->
+          <div class="skill-category frontend">
+            <h2>Frontend Development &amp; Design</h2>
+            <ul>
+              <li>JavaScript</li>
+              <li>Microsoft Visual Studio Code</li>
+              <li>LESS/SASS (Stylesheet Language)</li>
+              <li>Responsive Web Design</li>
+              <li>Front-End Development</li>
+              <li>Bootstrap</li>
+              <li>HTML (Semantic HTML)</li>
+            </ul>
+          </div>
+
+          <!-- Design Tools -->
+          <!-- Operating Systems -->
+          <!-- Version Control & Collaboration -->
+          <div class="skill-category tools">
+            <h2>Design Tools</h2>
+            <ul>
+              <li>Adobe Photoshop</li>
+              <li>SketchUp</li>
+            </ul>
+
+            <h2>Operating Systems</h2>
+            <ul>
+              <li>Linux (Basic proficiency)</li>
+              <li>Solaris os</li>
+              <li>Windows</li>
+            </ul>
+            <h2>Version Control & Collaboration</h2>
+            <ul>
+              <li>GitHub</li>
+              <li>GitLab</li>
+              <li>Git</li>
+            </ul>
+          </div>
+
       </div>
-	  <div class="abouthim doodle-border col-md-8">
-        <h1>Greetings, Earthlings! I present to you:</h1>
-        <h1>Gelo_V2.1</h1>
-        <p>Booting up the charm module for the delightful entity known affectionately as Angelo!</p>
-        <ul>
-          <li>Primary Functions:</li>
-          <li>
-            - Master of Visual <img class="vscodeIcon" src="/assets/images/vscode.svg" alt="VSCode Icon"> Wizardry and storytelling shenanigans.
-            <!-- The "fab fa-windows" class is from Font Awesome and represents the Visual Studio icon -->
-          </li>
-          <li>- Engages in recreational antics: conquering digital realms &#127918;, trekking terrestrial trails &#127956;, and exploring liquidy wonders &#127754;.</li>
-          <li>- Chief caretaker of two mischievous feline comrades: &#128572; Elliot and &#128008; Timmy, now joined by the energetic Natsu &#128062;.</li>
-          <li>- Enthusiastically navigating the quirky corridors of visual storytelling.</li>
-          <li>- Gaming Enthusiast: Conqueror of League of Legends, World of Warcraft: Wrath of the Lich King, and the captivating worlds of Horizon: Zero Dawn and Horizon Forbidden West.</li>
-        </ul>
-        <p>Get ready to join the fun! Follow Angelo's escapades through the social laughter network below! 😊 &#128071;</p>
+      <div class="skills_endmessage">
+        <p>These are just a few examples of the skills and languages he has acquired. He is constantly learning and
+          exploring new technologies to enhance his capabilities.</p>
       </div>
-    </div>
-    </div>
+      </section>
   </div>
-</section>
-<!-- End of About Him -->
-<!-- Skills -->
 
-  <section class="skills-section doodle-border">
-    <h1>Skills</h1>
-      <p>I also know that he has a wide range of skills and can communicate in different languages. Some of the skills and languages he possesses include:</p>
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Backend Development</h2>
-        <ul>
-          <li>MERN stack</li>
-          <li>Mongoose ODM</li>
-          <li>MongoDB</li>
-          <li>NoSQL</li>
-          <li>SQL</li>
-          <li>SQLite</li>
-          <li>MySQL</li>
-          <li>Database design</li>
-          <li>Express.js</li>
-          <li>Node.js</li>
-        </ul>
+
+
+
+
+
+
+
+
+
+  <!----------------------------------------------------------------->
+  <!-- #region LightBox---------------------------------------------->
+  <!----------------------------------------------------------------->
+
+
+
+  <!-- lightbox Pitikcats -->
+  <div id="pitikcats" class="lightbox">
+    <!-- Close button -->
+    <a href="#projects" class="lightbox_close"> <img src="./assets/images/pinnormal.png" alt=""> </a>
+    <!-- /Close button -->
+    <!-- Lightbox Content -->
+    <a href="#projects">
+      <div class="lightbox_wrapper">
+        <div class="lightbox_content">
+          <img class src="/assets/images/elliot.webp" alt="">
+          <p class="project_description">PitikCats: Capturing street cat tales one click at a time. 📸🐾PitikCats:
+            Capturing street cat tales one click at a time. 📸🐾</p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h2>Programming Languages</h2>
-        <ul>
-          <li>JavaScript</li>
-          <li>C++</li>
-        </ul>
+    </a><!-- /Lightbox Content -->
+  </div><!-- /lightbox Pitikcats -->
+
+
+  <!-- lightbox random -->
+  <div id="random" class="lightbox">
+    <!-- Close button -->
+    <a href="#projects" class="lightbox_close"> <img src="./assets/images/pinnormal.png" alt=""> </a>
+    <!-- /Close button -->
+    <!-- Lightbox Content -->
+    <a href="#projects">
+      <div class="lightbox_wrapper">
+        <div class="lightbox_content">
+          <img class src="/assets/images/elliottimmy.jpg" alt="">
+          <p class="project_description">PitikCats: Capturing street cat tales one click at a time. 📸🐾PitikCats:
+            Capturing street cat tales one click at a time. 📸🐾</p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h2>Frontend Development & Design</h2>
-        <ul>
-          <li>Microsoft Visual Studio</li>
-          <li>LESS/SCSS</li>
-          <li>Responsive web design</li>
-          <li>Bootstrap</li>
-          <li>CSS</li>
-          <li>Semantic HTML</li>
-          <li>GitHub, GitLab, Git</li>
-          <li>HTML</li>
-        </ul>
+    </a><!-- /Lightbox Content -->
+  </div><!-- /lightbox random -->
+
+
+  <!-- lightbox gawarang -->
+  <div id="gawarang" class="lightbox">
+    <!-- Close button -->
+    <a href="#projects" class="lightbox_close"> <img src="./assets/images/pinnormal.png" alt=""> </a>
+    <!-- /Close button -->
+    <!-- Lightbox Content -->
+    <a href="#projects">
+      <div class="lightbox_wrapper">
+        <div class="lightbox_content">
+          <img class src="/assets/images/gawarangmerch.webp" alt="">
+          <p class="project_description">gawarang gawarang gawarang</p>
+        </div>
       </div>
+    </a><!-- /Lightbox Content -->
+  </div><!-- /lightbox gawarang -->
+
+
+  <!----------------------------------------------------------------->
+  <!-- #endregion Lightbox-->
+  <!----------------------------------------------------------------->
+
+
+
+
+  <!----------------------------------------------------------------->
+  <!-- #region Projects-->
+  <!----------------------------------------------------------------->
+  <section class="projects">
+    <!--Projects Header-->
+    <div class="projects_heading_wrapper paper stickynote_default">
+      <!-- <div class="top-tape"></div> -->
+      <div class="tape-section"></div>
+      <h1 class="projects_heading" id="projects">Projects</h1>
+      <div class="tape-section"></div>
     </div>
-    <p>These are just a few examples of the skills and languages he has acquired. He is constantly learning and exploring new technologies to enhance his capabilities.</p>
+    <!--/Projects Header-->
+    <div class="projects_media_scroller media-scroller snaps-inline">
+
+
+      <!-- PitikCats -->
+      <div class="thumbs">
+        <a href="#pitikcats">
+          <img class src="/assets/images/elliot.webp" alt="">
+          <h1 class="project_title">PitikCats</h1>
+          <p class="project_description">
+            PitikCats: Capturing street cat tales one click at a time. 📸🐾
+          </p>
+        </a>
+      </div>
+      <!-- /PitikCats -->
+
+
+      <!-- random -->
+      <div class="thumbs">
+        <a href="#random">
+          <img class src="/assets/images/elliottimmy.jpg" alt="">
+          <h1 class="project_title">random</h1>
+          <p class="project_description">
+            random random random random random random random random random random random random random random
+          </p>
+        </a>
+      </div>
+      <!-- /random -->
+
+
+      <!-- Gawarang -->
+      <div class="thumbs">
+        <a href="#gawarang">
+          <img class src="/assets/images/gawarangmerch.webp" alt="">
+          <h1 class="project_title">gawarang</h1>
+          <p class="project_desc  ription">
+            GawarangGawarangGawarangGawarangGawarangGawarangGawarangGawarangGawarang
+          </p>
+        </a>
+      </div>
+      <!-- /Gawarang -->
+
+
+      <!-- PitikCats -->
+      <div class="thumbs">
+        <a href="#pitikcats">
+          <img class src="/assets/images/gawarangmerch.webp" alt="">
+          <h1 class="project_title">PitikCats</h1>
+          <p class="">
+            PitikCats: Capturing street cat tales one click at a time. 📸🐾
+          </p>
+        </a>
+      </div>
+      <!-- /PitikCats -->
+
+      <!-- PitikCats -->
+      <div class="thumbs">
+        <a href="#pitikcats">
+          <img class src="/assets/images/figure.svg" alt="">
+          <h1 class="project_title">PitikCats</h1>
+          <p class="">
+            PitikCats: Capturing street cat tales one click at a time. 📸🐾
+          </p>
+        </a>
+      </div>
+      <!-- /PitikCats -->
+
+
+
+
+    </div>
+
+  </section>
+  <!----------------------------------------------------------------->
+  <!-- #endregion project-->
+  <!----------------------------------------------------------------->
+  <section class="certificates">
+    <div class="paper stickynote_default">
+      <!-- <div class="top-tape"></div> -->
+      <div class="tape-section"></div>
+      <h1>Certificates</h1>
+      <div class="tape-section"></div>
+    </div>
+
+    <div class="media-scroller snaps-inline">
+      <!-- Capstone1 -->
+      <div class="media-element">
+        <img src="/assets/images/243_Capstone1__Val_Angelo_Salvador_Valencia.png" alt="">
+
+      </div>
+      <!-- !Capstone1 -->
+      <!-- Capstone2 -->
+      <div class="media-element">
+        <img src="/assets/images/243_Capstone2_Val_Angelo_Salvador_Valencia.png" alt="">
+
+      </div>
+      <!-- !Capstone2 -->
+      <!-- Capstone2 -->
+      <div class="media-element">
+        <img
+          src="/assets/images/Val Angelo S. Valencia Certificate of Participation - Building a Compelling Portfolio by Morgan Lopes.png"
+          alt="">
+      </div>
+      <!-- !Capstone2 -->
+
+      <!-- Capstone2 -->
+      <div class="media-element">
+        <img src="/assets/images/Val Angelo Salvador Valencia Intro to Amazon S3 - Certificate of Participation.png"
+          alt="">
+      </div>
+      <!-- !Capstone2 -->
+
+    </div>
+
   </section>
 
-<!-- end of Skills -->
 
 
+  <!-- Footer -->
 
-<!-- Cards -->
-<section>
-	<div class="p-3">
-		<h1 id="portfolio" class="p-5 text-center">
-			Portfolio
-		</h1>
-		<div class="d-flex flex-md-row flex-column justify-content-md-around align-items-center">
-			<!-- First Card -->
-			<div class="card col-md-3 col-10 mt-md-0 my-4 doodle-border">
-				<div class="card-image">
-					<img class="card-img-top" src="./assets/images/gawarangmerch.webp"
-						alt="Card image cap" />
-					<div class="image-overlay"></div>
-				</div>
-				<!-- -->
+  <!-- <section id="contact-him" class="contact-section"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed totam cupiditate, quos laudantium maxime at iste, iusto vero placeat quod consectetur dolore rem exercitationem suscipit nesciunt, accusamus nemo voluptate illo laborum modi expedita perspiciatis tempora fugiat! Soluta nihil eaque nam vel minima incidunt. Perspiciatis neque suscipit ab obcaecati voluptatum dignissimos vero ipsam amet, totam tenetur laboriosam odit fugiat in laborum, saepe molestias earum quos officia. </section> <footer> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed totam cupiditate, quos laudantium maxime at iste, iusto vero placeat quod consectetur dolore rem exercitationem suscipit nesciunt, accusamus nemo voluptate illo laborum modi expedita perspiciatis tempora fugiat! Soluta nihil eaque nam vel minima incidunt. Perspiciatis neque suscipit ab obcaecati voluptatum dignissimos vero ipsam amet, totam tenetur laboriosam odit fugiat in laborum, saepe molestias earum quos officia. </footer> -->
 
-				<div class="card-body">
-					<h1 class="card-title mt-5">
-						Gawarang
-					</h1>
-					<p class="card-text">E-commerce</p>
-				</div>
-			</div>
-			<!-- End of First Card -->
+  <!-- /Footer -->
 
-			<!-- Second Card -->
-			<div class="card col-md-3 col-10 mt-md-0 my-4 doodle-border">
-				<div class="card-image">
-					<img class="card-img-top" src="./assets/images/elliot.webp" alt="Card image cap" />
-					<div class="image-overlay"></div>
-				</div>
-				<!-- -->
-
-				<div class="card-body">
-					<h1 class="card-title mt-5">EAATxGaming</h1>
-					<p class="card-text">Gaming Site</p>
-				</div>
-			</div>
-			<!-- End of Second Card -->
-
-			<!-- Third Card -->
-			<div class="card col-md-3 col-10 mt-md-0 my-4 doodle-border">
-				<div class="card-image">
-					<img class="card-img-top" src="./assets/images/gawarang.webp" alt="Card image cap" />
-					<div class="image-overlay"></div>
-				</div>
-				<!-- -->
-
-				<div class="card-body">
-					<h1 class="card-title mt-5">Gawarang</h1>
-					<p class="card-text">Personal Blog</p>
-				</div>
-			</div>
-			<!-- End of Third Card -->
-		</div>
-	</div>
-</section>
-			<!-- end of card -->
-			<!-- Tools Start -->
-			<section class="d-none"></section>
-
-			<!-- End of cards -->
-			<!-- contact him -->
-			<!-- <div
-				id="contacthim"
-				class="d-flex text-center align-content-center">
-				<div class="row">
-					<div class="col-md-3">
-						<img
-							src="./assets/images/figure.svg"
-							alt="figure" />
-					</div>
-					<div class="col-md-9">
-						<div class="p-2 div-home-text">asd</div>
-					</div>
-				</div>
-			</div> -->
-			<!-- end of contact him -->
-		</div>
-		
-	</main>
-	<!-- /Main -->
-	<!-- Footer -->
-	<!-- Site footer -->
-	<footer class="doodle-border mt-4">
-		<div class="container" id="contacthim">
-			<div class="row">
-				<!-- HI! -->
-				<div class="col-sm-12 col-md-4 text-center">
-					<h1>Hit him up!</h1>
-					<img src=".//assets/images/figure.svg" alt="proto" />
-					<p class="text-justify">
-						To know more of his adventures check out his social
-						accounts.<span class="d-md-none d-md-none">&#128071;
-						</span>
-						<span class="d-none d-md-block">&#128073; </span>
-					</p>
-				</div>
-
-				<div id="" class="col-sm-12 col-md-2 align-self-md-center">
-					<a href="#" target="_blank">
-						<img src="./assets/images/icons8-facebook-50.svg" alt="facebook" />
-					</a>
-
-					<a href="https://www.linkedin.com/in/val-angelo-valencia/" target="_blank">
-						<img src="./assets/images/icons8-linkedin-circled-50.svg" alt="linkedin" />
-					</a>
-
-					<a href="https://github.com/valangelo/" target="_blank">
-						<img src="./assets/images/logo-github.svg" alt="github" />
-					</a>
-
-					<a href="mailto:valangelovalencia@gmail.com" target="_blank">
-						<img src="./assets/images/icons8-gmail-logo-50.svg" alt="email" />
-					</a>
-					<!-- <a
-							href="https://www.pinterest.ph/n0huart/"
-							target="_blank">
-							<img
-								src="./assets/images/icons8-pinterest-50.svg"
-								alt="pinterest" />
-						</a> -->
-					<a href="#" target="_blank">
-						<img src="./assets/images/icons8-youtube-50.svg" alt="youtube" />
-					</a>
-				</div>
-				<!-- Hi End -->
-				<div class="col-sm-12 col-md-6">
-					<h1>Contact Him</h1>
-					<form method="GET" action="mailto:Valangelovalencia@gmail.com" enctype="text/plain" target="_blank">
-						<div class="form-group">
-							<label for="subject">Subject</label>
-							<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" />
-						</div>
-
-						<div class="form-group">
-							<label for="commentbox">Message</label>
-							<textarea class="form-control" id="commentbox" name="commentbox" placeholder="message here"
-								rows="2"></textarea>
-						</div>
-
-						<button type="submit" class="btn btn-primary">
-							Submit
-						</button>
-					</form>
-				</div>
-
-				<!-- end of row-->
-			</div>
-			<!-- end of row -->
-
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 col-sm-6 col-xs-12">
-						<p class="copyright-text">
-							&copy; <span id="current-year"></span> All Rights Reserved by
-							<a href="#">Val Angelo Valencia</a>.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- /Footer -->
-
-	<!-- index.JS -->
-
-	<script src="./assets/js/index.js" defer></script>
+  </main>
+  </div>
+  <script src="./assets/js/index.js" defer="defer"></script>
 </body>
 
 </html>
+
+<!-- <section id="portfolio"> <div class="portfolio-scroller"> <div class="media-element"> <img src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400" alt=""> <p class="title">Short title</p> </div> </div> <div class="media-scroller snaps-inline"> <div class="media-element"> <img src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400" alt=""> <p class="title">Short title</p> </div> </div> <div class="media-scroller snaps-inline"> <div class="media-element"> <img src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400" alt=""> <p class="title">Short title</p> </div> </div> <div class="media-scroller snaps-inline"> <div class="media-element"> <img src="https://images.unsplash.com/photo-1641353989082-9b15fa661805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MzM5ODcyOA&ixlib=rb-1.2.1&q=80&w=400" alt=""> <p class="title">Short title</p> </div> </div> </section> -->

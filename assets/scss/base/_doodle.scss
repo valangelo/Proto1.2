@@ -6,7 +6,7 @@ kaso bawal daw pahiram nlng ng svg
  * https://github.com/chr15m/DoodleCSS
  */
 
- @import './variables';
+@use './variables' as *;
 $image-border-border: url("#{$asset-path}border.svg") 10 10 10 10 stretch stretch;
 $image-border-button: url("#{$asset-path}button.svg") 10 10 10 10 stretch stretch;
 

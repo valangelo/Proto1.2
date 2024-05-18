@@ -55,3 +55,38 @@
 // });
 
 // observer.observe(valiw);
+// Function to handle opening and closing dialogs
+// Function to handle opening and closing dialogs
+// Function to handle opening and closing dialogs
+// function handleDialog(dialogSelector) {
+//     const dialog = document.getElementById(dialogSelector);
+//     const openButton = document.querySelector(`[data-open-modal="${dialogSelector}"]`);
+//     const closeButton = document.querySelector(`[data-close-modal="${dialogSelector}"]`);
+    
+//     openButton.addEventListener("click", () => {
+//         dialog.showModal();
+//         console.log('open ' + dialogSelector);
+//     });
+
+//     closeButton.addEventListener("click", () => {
+//         dialog.close();
+//         console.log('close ' + dialogSelector);
+//     });
+
+//     dialog.addEventListener("click", (e) => {
+//         const dialogDimensions = dialog.getBoundingClientRect();
+//         if (
+//             e.clientX < dialogDimensions.left ||
+//             e.clientX > dialogDimensions.right ||
+//             e.clientY < dialogDimensions.top ||
+//             e.clientY > dialogDimensions.bottom
+//         ) {
+//             console.log('dimension ' + dialogSelector);
+//             dialog.close();
+//         }
+//     });
+// }
+
+// // Apply the function to the PitikCats dialog
+// handleDialog("pitikcats");
+// handleDialog("vero");

@@ -1,0 +1,39 @@
+.footer_links a img {
+    height: 63px;
+}
+
+.contact_him {
+    display: grid;
+    grid-template-columns: minmax(300px, auto) minmax(500px, auto) minmax(500px, auto);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "footer_message footer_links footer_form"
+		"footer_message footer_links footer_form"
+        "copyright       copyright       copyright";
+}
+    
+.footer_message, .footer_links, .footer_form, .copyright {
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+	
+}
+
+.footer_message {
+    grid-area: footer_message;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.footer_links {
+    display: flex;
+    grid-area: footer_links;
+}
+
+.footer_form {
+    grid-area: footer_form;
+}
+
+.copyright {
+    grid-area: copyright;
+}

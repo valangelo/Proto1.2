@@ -8,66 +8,118 @@
 // at this point im just playing around specificity
 // 
 // Base
-$scss-path: "./assets/scss/";
-@use "sass:meta";
-@layer base, components, layouts;
-@layer base {
-  @layer navbar {
-    @layer reset {
-      @include meta.load-css("#{$scss-path}base/reset");
-    }
-    @layer variables {
-      @include meta.load-css("#{$scss-path}base/variables");
-    }
-    @layer typography {
-      @include meta.load-css("#{$scss-path}base/typography");
-    }
-    @layer doodle {
-      @include meta.load-css("#{$scss-path}base/doodle");
-    }
-    @layer animations {
-      @include meta.load-css("#{$scss-path}base/animations");
-    }
-  }
-}
-@layer components {
-  @layer navbar {
-    @include meta.load-css("#{$scss-path}components/navbar");
-  }
-  @layer cards {
-    @include meta.load-css("#{$scss-path}components/cards");
-  }
-  @layer scrollbar {
-    @include meta.load-css("#{$scss-path}components/scrollbar");
-  }
-  @layer card_effect {
-    @include meta.load-css("#{$scss-path}components/card_effect");
-  }
-  @layer stickynote_effect {
-    // @include meta.load-css('#{$scss-path}components/stickynote_effect');
-  }
-}
+// $scss-path: "./assets/scss/";
+// @use "sass:meta";
+// @layer base, components, layouts;
+// @layer base {
+//   @layer navbar {
+//     @layer reset {
+//       @include meta.load-css("./assets/scss/base/reset");
+//     }
+//     @layer variables {
+//       @include meta.load-css("./assets/scss/base/variables");
+//     }
+//     @layer typography {
+//       @include meta.load-css("./assets/scss/base/typography");
+//     }
+//     @layer doodle {
+//       @include meta.load-css("./assets/scss/base/doodle");
+//     }
+//     @layer animations {
+//       @include meta.load-css("./assets/scss/base/animations");
+//     }
+//   }
+// }
+// @layer components {
+//   @layer navbar {
+//     @include meta.load-css("./assets/scss/components/navbar");
+//   }
+//   @layer cards {
+//     @include meta.load-css("./assets/scss/components/cards");
+//   }
+//   @layer scrollbar {
+//     @include meta.load-css("./assets/scss/components/scrollbar");
+//   }
+//   @layer card_effect {
+//     @include meta.load-css("./assets/scss/components/card_effect");
+//   }
+//   @layer stickynote_effect {
+//     // @include meta.load-css('./assets/scss/components/stickynote_effect');
+//   }
+// }
 
-@layer layouts {
-  @layer abouthim {
-    @include meta.load-css("#{$scss-path}layouts/abouthim");
-  }
-  @layer certificates {
-    @include meta.load-css("#{$scss-path}layouts/certificates");
-  }
-  @layer intro {
-    @include meta.load-css("#{$scss-path}layouts/intro");
-  }
-  @layer main_layout {
-    @include meta.load-css("#{$scss-path}layouts/main_layout");
-  }
-  @layer projects {
-    @include meta.load-css("#{$scss-path}layouts/projects");
-  }
-  @layer skills {
-    @include meta.load-css("#{$scss-path}layouts/skills");
-  }
-  @layer tdnn {
-    @include meta.load-css("#{$scss-path}layouts/tdnn");
-  }
-}
+// @layer layouts {
+//   @layer abouthim {
+//     @include meta.load-css("./assets/scss/layouts/abouthim");
+//   }
+//   @layer certificates {
+//     @include meta.load-css("./assets/scss/layouts/certificates");
+//   }
+//   @layer intro {
+//     @include meta.load-css("./assets/scss/layouts/intro");
+//   }
+//   @layer main_layout {
+//     @include meta.load-css("./assets/scss/layouts/main_layout");
+//   }
+//   @layer projects {
+//     @include meta.load-css("./assets/scss/layouts/projects");
+//   }
+//   @layer skills {
+//     @include meta.load-css("./assets/scss/layouts/skills");
+//   }
+//   @layer tdnn {
+//     @include meta.load-css("./assets/scss/layouts/tdnn");
+//   }
+// }
+// $scss-path: "./assets/scss/";
+
+@use "sass:meta";
+
+@use "./assets/scss/base/reset" as reset;
+@use "./assets/scss/base/variables" as variables;
+@use "./assets/scss/base/typography" as typography;
+@use "./assets/scss/base/doodle" as doodle;
+@use "./assets/scss/base/animations" as animations;
+
+@use "./assets/scss/components/navbar" as navbar;
+@use "./assets/scss/components/cards" as cards;
+@use "./assets/scss/components/scrollbar" as scrollbar;
+@use "./assets/scss/components/card_effect" as card_effect;
+@use "./assets/scss/components/stickynote_effect" as stickynote_effect;
+
+@use "./assets/scss/layouts/abouthim" as abouthim;
+@use "./assets/scss/layouts/certificates" as certificates;
+@use "./assets/scss/layouts/hero" as hero;
+@use "./assets/scss/layouts/main_layout" as main_layout;
+@use "./assets/scss/layouts/projects" as projects;
+@use "./assets/scss/layouts/skills" as skills;
+@use "./assets/scss/layouts/footer" as footer;
+@use "./assets/scss/layouts/tdnn" as tdnn;
+
+
+// $scss-path: "./assets/scss/";
+
+// @use "sass:meta";
+
+// @use "#{$scss-path}base/reset" as baseReset;
+// @use "#{$scss-path}base/variables" as baseVariables;
+// @use "#{$scss-path}base/typography" as baseTypography;
+// @use "#{$scss-path}base/doodle" as baseDoodle;
+// @use "#{$scss-path}base/animations" as baseAnimations;
+
+// @use "#{$scss-path}components/navbar" as componentsNavbar;
+// @use "#{$scss-path}components/cards" as componentsCards;
+// @use "#{$scss-path}components/scrollbar" as componentsScrollbar;
+// @use "#{$scss-path}components/card_effect" as componentsCardEffect;
+// // @use "#{$scss-path}components/stickynote_effect" as componentsStickynoteEffect;
+
+// @use "#{$scss-path}layouts/abouthim" as layoutsAbouthim;
+// @use "#{$scss-path}layouts/certificates" as layoutsCertificates;
+// @use "#{$scss-path}layouts/intro" as layoutsIntro;
+// @use "#{$scss-path}layouts/main_layout" as layoutsMainLayout;
+// @use "#{$scss-path}layouts/projects" as layoutsProjects;
+// @use "#{$scss-path}layouts/skills" as layoutsSkills;
+// @use "#{$scss-path}layouts/tdnn" as layoutsTdnn;
+// *{
+    // outline: 1px solid orangered;
+// }
