@@ -10,7 +10,6 @@
 	$image-background-texture:url("#{$asset-path}seamless_paper_texture.png");
 	// https://github.com/argyleink/open-props
 
-
 :where(html) {
 
 	// Colors
@@ -24,7 +23,7 @@
 	--clr-border: hsla(0, 0%, 50%, 1);
 	--clr-shade: hsla(0, 0%, 73%, 1);
 	--clr-disabled: hsla(0, 0%, 50%, 1);
-
+	
 	--pink: #ecb2ba;
     --pink-dark: #c6939a;
     --tape-gray: #dbd8be;
@@ -89,9 +88,11 @@
 	--size-header-3: 35ch;
 
 	// Spacing
-	--layout-padding: 3rem;
-	--border-width: 10px;     // Default border width
-	--border-radius: 4px;    // Default border radius
+	--layout_elements_offset:0rem;
+	--layout-margin: .5rem;
+	--layout-padding:1rem;
+	--border-width: 10px;  
+	--border-radius: .5rem;
   	
 	// Box Shadow
 	--box-shadow: 0px 0px 10px 4px var(--clr-disabled),
@@ -141,4 +142,13 @@
 	--inner-shadow-2: inset 0 1px 4px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
 	--inner-shadow-3: inset 0 2px 8px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
 	--inner-shadow-4: inset 0 2px 14px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%)), var(--inner-shadow-highlight);
+
+
+
+	
+	--clr-shadow-color: 0 0% 1%;
+	--shadow-opacity-base:.35;
+	--shadow-layer1: drop-shadow(0px 0px 10px hsl(var(--clr-shadow-color) /  var(--shadow-opacity-base)));
+	--shadow-layer2: drop-shadow(5px 5px 1px hsl(var(--clr-shadow-color) / var(--shadow-opacity-base)));
+	--shadow-layer3: drop-shadow(15px 15px 20px hsl(var(--clr-shadow-color) / var(--shadow-opacity-base)));
   }

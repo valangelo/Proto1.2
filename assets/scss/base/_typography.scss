@@ -1,94 +1,37 @@
 // _typohraphy.scss
 $font-path :"/assets/fonts/";
-@font-face {
-  font-family: 'Amatic SC';
-  src: url('#{$font-path}Amatic_SC/AmaticSC-Regular.ttf') format('truetype'),
-       url('#{$font-path}Amatic_SC/AmaticSC-Bold.ttf') format('truetype');
-  font-weight: normal; /* Corresponds to the regular font file */
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Caveat';
-  src: url('#{$font-path}Caveat/static/Caveat-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+// Define a mixin for @font-face rules
+@mixin font-face($family, $file, $weight: normal) {
+  @font-face {
+    font-family: '#{$family}';
+    src: url('#{$font-path}#{$file}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: normal;
+  }
 }
-
-@font-face {
-  font-family: 'Caveat';
-  src: url('#{$font-path}Caveat/static/Caveat-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Caveat';
-  src: url('#{$font-path}Caveat/static/Caveat-Medium.ttf') format('truetype');
-  font-weight: 500; /* Medium weight */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Caveat';
-  src: url('#{$font-path}Caveat/static/Caveat-SemiBold.ttf') format('truetype');
-  font-weight: 600; /* Semi-bold weight */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Caveat';
-  src: url('#{$font-path}Caveat/Caveat-VariableFont_wght.ttf') format('truetype');
-  font-weight: 1 999; /* Variable font weight range */
-  font-style: normal;
-}
+// Define @font-face rules using the mixin
+@include font-face('Amatic SC', 'Amatic_SC/AmaticSC-Regular');
+@include font-face('Amatic SC', 'Amatic_SC/AmaticSC-Bold', bold);
+@include font-face('Caveat', 'Caveat/static/Caveat-Regular');
+@include font-face('Caveat', 'Caveat/static/Caveat-Bold', bold);
+@include font-face('Caveat', 'Caveat/static/Caveat-Medium', 500);
+@include font-face('Caveat', 'Caveat/static/Caveat-SemiBold', 600);
+@include font-face('Caveat', 'Caveat/Caveat-VariableFont_wght', 1999);
+@include font-face('GloriaHallelujah', 'Gloria_Hallelujah/GloriaHallelujah-Regular');
+@include font-face('Mansalva', 'Mansalva/Mansalva-Regular');
+@include font-face('Mynerve', 'Mynerve/Mynerve-Regular');
+@include font-face('Pacifico', 'Pacifico/Pacifico-Regular');
+@include font-face('Shadows into Light', 'Shadows_into_Light/ShadowsintoLight-Regular');
+@include font-face('Short Stack', 'Short_Stack/ShortStack-Regular', 1999);
+@include font-face('Roboto', 'Roboto/Roboto-Regular');
 
 
-@font-face {
-  font-family: 'GloriaHallelujah';
-  src: url('#{$font-path}Gloria_Hallelujah/GloriaHallelujah-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+// Define a mixin for font styles
+@mixin font-style($family, $weight: normal) {
+  font-family: '#{$family}', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; // System fonts as fallback
+  font-weight: $weight;
 }
-@font-face {
-  font-family: 'Mansalva';
-  src: url('#{$font-path}Mansalva/Mansalva-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Mynerve';
-  src: url('#{$font-path}Mynerve/Mynerve-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Pacifico';
-  src: url('#{$font-path}Pacifico/Pacifico-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Shadows into Light';
-  src: url('#{$font-path}Shadows_into_Light/ShadowsintoLight-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Short Stack';
-  src: url('#{$font-path}Short_Stack/ShortStack-Regular.ttf') format('truetype');
-  font-weight: 1 999;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto';
-  src: url('#{$font-path}Roboto/Roboto-Regular.ttf') format('truetype');
-}
-
 // tested if fonts working
 body {
   font-family:"Amatic SC";

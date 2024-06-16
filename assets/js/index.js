@@ -1,4 +1,4 @@
-// Disable Drag
+// // Disable Drag
 
 
 // console.log("test");
@@ -55,9 +55,9 @@
 // });
 
 // observer.observe(valiw);
-// Function to handle opening and closing dialogs
-// Function to handle opening and closing dialogs
-// Function to handle opening and closing dialogs
+// // Function to handle opening and closing dialogs
+// // Function to handle opening and closing dialogs
+// // Function to handle opening and closing dialogs
 // function handleDialog(dialogSelector) {
 //     const dialog = document.getElementById(dialogSelector);
 //     const openButton = document.querySelector(`[data-open-modal="${dialogSelector}"]`);

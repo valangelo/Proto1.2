@@ -21,6 +21,7 @@ summary,time,mark,audio,video
     font: inherit;
     vertical-align: baseline;
     background-color: transparent;
+    box-sizing: border-box;
     
 }
 
@@ -87,17 +88,9 @@ input:focus {
 html {
     hanging-punctuation: first last;
     color-scheme: dark light;
-}
-
-body {
-    min-height: 100svh;
-}
-body, html {
-    height: 100%;  // Ensure the body and html take the full height of the viewport
-    margin: 0;     // Remove default margin
+    
 }
 @media (prefers-reduced-motion: no-preference) {
-
     html,
     :has(:target) {
         scroll-behavior: smooth;

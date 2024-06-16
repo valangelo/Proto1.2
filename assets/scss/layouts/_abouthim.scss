@@ -5,8 +5,8 @@ $aboutme_image__width: 250px;
 
 .abouthim-section {
   display: flex;
-  margin-inline: auto;
-  margin-block: 2rem;
+  // margin-inline: auto;
+  // margin-block: 2rem;
   border-style: groove;
   border-width: var(--border-width);
   border-color: #222;
@@ -16,7 +16,6 @@ $aboutme_image__width: 250px;
   background-color: var(--clr-mainBG);
 	background: variables.$image-background-texture;
   background-blend-mode:lighten;
-  width: 80vw;
   grid-template-columns: auto $aboutme_image__width;
   // --shadow: var(--shadow-5);
   box-shadow: var(--shadow-4);

@@ -47,6 +47,7 @@
 }
 ::-webkit-scrollbar-thumb {
 	/* 5 */
+	cursor: pointer;
 	border-radius: 50px;
 	background-clip: content-box;
 	background-image: url("#{variables.$asset-path}pencilclipart.svg");

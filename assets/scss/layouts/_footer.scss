@@ -1,39 +1,158 @@
-.footer_links a img {
-    height: 63px;
-}
+@use "../base/_variables";
+@use "../components/stickynote_effect";
 
 .contact_him {
-    display: grid;
-    grid-template-columns: minmax(300px, auto) minmax(500px, auto) minmax(500px, auto);
-    grid-template-rows: auto auto;
-    grid-template-areas:
-        "footer_message footer_links footer_form"
-		"footer_message footer_links footer_form"
-        "copyright       copyright       copyright";
+    height: 40vh;
+    // margin: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 2vw, 20px);
+    padding: clamp(10px, 2vw, 20px);
+    background: var(--background);
+    background: variables.$image-background-texture;
+    background-color: var(--clr-mainBG);
+    filter: brightness(1.05);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-image: variables.$image-border-button;
+    box-shadow: var(--shadow-4);
+    border-radius: 10px;
 }
-    
-.footer_message, .footer_links, .footer_form, .copyright {
-    grid-template-columns: subgrid;
-    grid-template-rows: subgrid;
-	
+
+footer>* {
+    // outline: 1px solid orangered;
+}
+
+
+.footer_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: clamp(10px, 2vw, 20px);
+}
+
+.footer_message,
+.footer_links,
+.footer_form,
+.copyright {
+    width: 100%;
 }
 
 .footer_message {
-    grid-area: footer_message;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+    align-items: center;
+    text-align: center;
+
+    img {
+        margin: 0 auto;
+        /* Center the image */
+
+        // outline: 1px solid orangered;
+        align-items: center;
+        text-align: center;
+    }
+
+    width: 25vw;
+
+    p {
+        display: inline;
+    }
+
+    p+span {
+        visibility: hidden;
+    }
 }
 
 .footer_links {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(5px, 1vw, 10px);
+    /* Adjust the gap between links if needed */
+}
+
+.footer_links a img {
+    height: clamp(50px, 5vw, 63px);
+    width: clamp(50px, 5vw, 63px);
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.message_form {
     display: flex;
-    grid-area: footer_links;
+    flex-direction: column;
 }
 
 .footer_form {
-    grid-area: footer_form;
+    width: 25vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    h2 {
+        // outline: 1px solid orangered;
+        margin: 1rem;
+    }
+
+}
+
+.form-group {
+    gap: 1rem;
+    font-size: 2rem;
+    display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    align-items: center;
+
+    .form-control {
+        background: var(--background);
+        background: variables.$image-background-texture;
+        background-color: var(--clr-mainBG);
+        // filter: brightness(1.05);   
+        border-style: solid;
+        border-width: var(--border-width);
+        border-image: variables.$image-border-button;
+        box-shadow: var(--shadow-4);
+        border-radius: 10px;
+    }
+}
+
+//MARK: Submit Button
+.submit-button {
+    color: black;
+    // outline: 1px solid orangered;
+    // font-size: 3rem;
+    background: var(--background);
+    background: variables.$image-background-texture;
+    background-color: var(--clr-mainBG);
+    // filter: brightness(1.05);   
+    border-style: solid;
+    border-width: var(--border-width);
+    border-image: variables.$image-border-button;
+    box-shadow: var(--shadow-4);
+    border-radius: 10px;
 }
 
 .copyright {
-    grid-area: copyright;
+    width: 100vw;
+    // background-color: yellow;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.copyright p {
+    // background-color: red;
+    text-align: center;
+    width: 100%;
+    margin: 0;
 }
