@@ -16,7 +16,7 @@ summary,time,mark,audio,video
 {    margin: 0;
     padding: 0;
     border: 0;
-    outline: 0;
+    outline: 0; 
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -41,6 +41,7 @@ section {
 }
 
 body {
+    overflow-x: hidden;
     line-height: 1;
 }
 
@@ -122,7 +123,15 @@ video {
     display: block;
     max-width: 100%;
 }
+image{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
 body {
 
     // Mobile-specific styles
@@ -136,4 +145,8 @@ body {
 
     // Large desktop-specific styles
     @media (min-width: var(--large-desktop)) {}
+}
+
+html,body{
+    min-width:400px;
 }

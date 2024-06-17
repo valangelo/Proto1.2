@@ -2,26 +2,10 @@
 @use "../components/stickynote_effect";
 
 .projects {
-  width: 100%;
-  margin: 0 0;
+  // overflow: hidden;
+  // max-width:95%; 
+  margin: auto -2rem;
   padding: 0;
-  // width: 100vw;
-  padding: var(--layout-padding);
-  background: var(--background) variables.$image-background-texture;
-  // background-color: red;
-  filter: brightness(1.05);
-  border: var(--border-width) solid;
-  border-image: variables.$image-border-button;
-  --shadow: var(--shadow-4,
-    0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-    0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-    0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-    0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-    0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-    0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
-  box-shadow: var(--shadow);
-
-// border-radius: 15px;
   .projects_heading{
     font-size: clamp(1rem, 2.5vw, 2rem); 
   }
@@ -36,13 +20,14 @@
 
 
 .projects_media_scroller {
+  border: #000 solid 1px;
   --_spacer: 3rem;
   container-type: inline-size;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 40%;
   grid-template-rows: auto auto minmax(1fr, 250px);
-  // padding: 0 var(--_spacer) var(--_spacer);
+  padding: 0 var(--_spacer) var(--_spacer);
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }//.projects_media_scroller

@@ -10,7 +10,10 @@ $font-path :"/assets/fonts/";
     font-style: normal;
   }
 }
+
+
 // Define @font-face rules using the mixin
+@include font-face('Neucha', 'Neucha/Neucha-Regular');
 @include font-face('Amatic SC', 'Amatic_SC/AmaticSC-Regular');
 @include font-face('Amatic SC', 'Amatic_SC/AmaticSC-Bold', bold);
 @include font-face('Caveat', 'Caveat/static/Caveat-Regular');
@@ -42,7 +45,8 @@ h1{
   font-weight: bold;
 }
 h2{
-  font-family: 'Caveat';
+  font-family: 'Mynerve';
+  font-weight: bold;
 }
 // li{
 //   font-family: 'Short Stack';
@@ -92,4 +96,25 @@ p{
 }
 h2{
   font-size: var(--font-size-fluid-1);
+}
+
+
+
+
+
+
+
+
+
+
+
+.nav_links li a {
+  color: var(--clr-link);
+}
+
+.logo-label{
+   a{
+	color: var(--clr-link);
+	text-decoration: none;
+  }
 }

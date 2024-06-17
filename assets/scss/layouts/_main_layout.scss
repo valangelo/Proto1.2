@@ -28,17 +28,17 @@
 
 
 
-body {
+html,body {
   background-color: var(--clr-shade);
   background: variables.$image-background-texture;
   color: var(--clr-font);
   user-select: none;
 }
-html {
+.fakehtml {
   @include pseudo-content("html");
 }
 
-body {
+.fakebody {
   @include pseudo-content("body");
 }
 

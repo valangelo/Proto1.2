@@ -51,19 +51,15 @@
     }
 }
 .skills_container{
-
-    display: flex;
-    flex-wrap: wrap;
-    margin-block-end: var(--layout-padding);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    height: max-content;
 }
 
 .skill-category {
-    flex-grow: 1;
-    flex-basis: 0;
-    flex-shrink: 1;
-    height: 500px;
+    
     list-style-type: circle;
-    min-width: 500px;
+    // max-width:max-content;
     h2{
         font-size: var(--font-size-fluid-2);
         padding-bottom: 1rem;
