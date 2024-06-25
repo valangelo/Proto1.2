@@ -22,7 +22,7 @@ $image-border-button: url("#{$asset-path}button.svg") 10 10 10 10 stretch stretc
 
 .doodle textarea {
 	border-style: solid;
-	border-width: var(border-width);
+	// border-width: var(border-width);
 	border-image: var($image-border-border)
 }
 
@@ -30,7 +30,7 @@ $image-border-button: url("#{$asset-path}button.svg") 10 10 10 10 stretch stretc
 .doodle input,
 .doodle select {
 	border-style: solid;
-	border-width: 10px 10px 10px 10px;
+	// border-width: 10px 10px 10px 10px;
 	border-image: var($image-border-button)
 }
 .doodle-border {

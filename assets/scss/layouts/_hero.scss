@@ -24,10 +24,11 @@ max-width: clamp(300px, 75vw, calc(100% - 500px));
 // min-width: 50dvw;
 // min-width: 500px;
 // padding: 1.75rem;
-background: variables.$image-background-texture;
-background-color: var(--clr-mainBG);
-background-color: hsla(0, 0%, 100%, 0.825);
-filter: brightness(1.15);
+background-color: #F4F5CD;
+background-image: variables.$image-background-crumpled-paper;
+// background: variables.$image-background-texture ,url("./assets/images/kelan-Paper-texture-filter.svg") ;
+  background-blend-mode:saturation;
+// filter: brightness(1.15);
 
 // background-color: black;
 // font-size: .25rem;
@@ -66,7 +67,7 @@ font-size: clamp(1rem, 1vw + 1rem, 2rem);
 
 
 $black: #000;
-$white: #fff;
+$white: #F4F5CD;
 $shadow: rgba(0, 0, 0, 0.1);
 $px: 7px;
 
@@ -107,7 +108,7 @@ $px 3*$px $shadow,
 
 // }
 
-@media screen and (width < 660px) {
+@media screen and (max-width : 660px) {
 .hero {
 position: relative;
 // padding: 0px;

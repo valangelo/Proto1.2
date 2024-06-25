@@ -27,19 +27,13 @@
 
     background: var(--background);
     background: variables.$image-background-texture;
+    // background: variables.$image-background-crumpled-paper;
     background-color: var(--clr-mainBG);
 	// filter: brightness(1.05);
     border-style: solid;
     border-width: var(--border-width)                           ;
     border-image: variables.$image-border-button;
-	--shadow:var( --shadow-4,
-	0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-	0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-	0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-	0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-	0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-	0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
-	box-shadow: var(--shadow);
+    box-shadow: var(--shadow-4);
     border-radius: 10px;
 	
 }
@@ -52,6 +46,7 @@
 }
 .skills_container{
     display: grid;
+    
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     height: max-content;
 }

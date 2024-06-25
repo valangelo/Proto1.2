@@ -1,17 +1,21 @@
-// _typohraphy.scss
-$font-path :"/assets/fonts/";
+$font-path: "/assets/fonts/";
 
 // Define a mixin for @font-face rules
-@mixin font-face($family, $file, $weight: normal) {
+@mixin font-face($family, $file, $weight: normal, $format: 'truetype') {
   @font-face {
     font-family: '#{$family}';
-    src: url('#{$font-path}#{$file}.ttf') format('truetype');
+    @if $format == 'truetype' {
+      src: url('#{$font-path}#{$file}.ttf') format('truetype');
+    } @else if $format == 'opentype' {
+      src: url('#{$font-path}#{$file}.otf') format('opentype');
+    } @else if $format == 'both' {
+      src: url('#{$font-path}#{$file}.ttf') format('truetype'),
+           url('#{$font-path}#{$file}.otf') format('opentype');
+    }
     font-weight: $weight;
     font-style: normal;
   }
 }
-
-
 // Define @font-face rules using the mixin
 @include font-face('Neucha', 'Neucha/Neucha-Regular');
 @include font-face('Amatic SC', 'Amatic_SC/AmaticSC-Regular');
@@ -25,96 +29,91 @@ $font-path :"/assets/fonts/";
 @include font-face('Mansalva', 'Mansalva/Mansalva-Regular');
 @include font-face('Mynerve', 'Mynerve/Mynerve-Regular');
 @include font-face('Pacifico', 'Pacifico/Pacifico-Regular');
-@include font-face('Shadows into Light', 'Shadows_into_Light/ShadowsintoLight-Regular');
+@include font-face('Shadows into Light', 'Shadows_Into_Light/ShadowsIntoLight-Regular');
 @include font-face('Short Stack', 'Short_Stack/ShortStack-Regular', 1999);
 @include font-face('Roboto', 'Roboto/Roboto-Regular');
-
+@include font-face('Atlandsketches', 'atlandsketches-bb/atlandsketchesbb_reg');
+@include font-face('Freeride', 'Freeride/Freeride',normal, 'opentype');
+@include font-face('TheUnseen', 'TheUnseen/TheUnseen');
 
 // Define a mixin for font styles
 @mixin font-style($family, $weight: normal) {
   font-family: '#{$family}', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; // System fonts as fallback
   font-weight: $weight;
 }
-// tested if fonts working
+
+
 body {
-  font-family:"Amatic SC";
-  // font-family: 'Short Stack';
-}
-h1{
-  font-family: 'Caveat';
-  font-weight: bold;
-}
-h2{
-  font-family: 'Mynerve';
-  font-weight: bold;
-}
-// li{
-//   font-family: 'Short Stack';
-//   //  
-// }
-p{
-  font-family: 'Short Stack';
-  font-weight: bold;
+  @include font-style('Neucha');
 }
 
-.proto{
-  font-family: "Mynerve";
-  font-weight: bold;
+h1 {
+  @include font-style('Caveat', bold);
+  font-size: var(--font-size-fluid-2);
 }
+
+h2 {
+  @include font-style('Mynerve', bold);
+  text-transform: capitalize;
+  font-size: var(--font-size-fluid-2);
+}
+h3 {
+  @include font-style('Neucha');
+  text-transform: capitalize;
+  // font-size: var(--font-size-fluid-2);
+}
+// NAV
+.logo{
+  font-size: clamp(.5rem, 2rem, 2vw);  
+}
+.nav_button{
+  @include font-style('Shadows into Light');
+  font-size: clamp(1rem, 2rem, 3vw);  
+  color: var(--clr-link);
+  text-decoration: none;
+}
+
+// /NAV
+
+p {
+  @include font-style('GloriaHallelujah', bold);
+  // @include font-style('Freeride', bold);
+  font-size: var(--font-size-fluid-1);
+  filter: var(--shadow-layer1)
+}
+
+.proto {
+  @include font-style('Mynerve', bold);
+}
+
 .intro_prologue {
-  h1{
-  font-weight:bold;
-  }
-  h2{
-    text-transform: capitalize;
-    font-family: "Short Stack";
+  h1 {
     font-weight: bold;
+  }
+
+  h2 {
+    @include font-style('Short Stack', bold);
     font-size: var(--font-size-fluid-2);
   }
-  p{
-  font-family: "GloriaHallelujah";
-  font-weight: 100;
+
+  p {
+    @include font-style('GloriaHallelujah', 100);
+    font-size: var(--font-size-fluid-1);
   }
 }
-
 
 strong {
   font-weight: bold;
 }
 
-.nav_links{
+.nav_links {
   font-size: 1.75em;
-  // font-family: 'Mansalva';
-  font-weight: bold;
+  @include font-style('Mansalva', bold);
 }
 
-h1{
-  font-size: var(--font-size-fluid-2);
-}
-p{
-  font-size: var(--font-size-fluid-1);
-}
-h2{
-  font-size: var(--font-size-fluid-1);
-}
-
-
-
-
-
-
-
-
-
-
-
-.nav_links li a {
-  color: var(--clr-link);
-}
-
-.logo-label{
-   a{
-	color: var(--clr-link);
-	text-decoration: none;
+.logo-label {
+  a {
+    color: var(--clr-link);
+    text-decoration: none;
   }
 }

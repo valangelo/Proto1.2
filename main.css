@@ -7,12 +7,13 @@
   --clr-visited: hsla(270, 100%, 50%, 1); /* Purple */
   --clr-active: hsla(0, 100%, 50%, 1); /* Red */
   --clr-font: hsla(0, 0%, 14%, 1);
-  --clr-background: hsla(30, 100%, 96%, 1);
+  --clr-background: hsla(30, 100%, 100%,1);
   --clr-mainBG:hsla(49, 16%, 87%,1);
   --clr-link: hsl(0, 0%, 11%);
   --clr-border: hsla(0, 0%, 50%, 1);
   --clr-shade: hsla(0, 0%, 73%, 1);
   --clr-disabled: hsla(0, 0%, 50%, 1);
+  --clr-border:hsla(40, 2%, 25%,1);
   --pink: #ecb2ba;
   --pink-dark: #c6939a;
   --tape-gray: #dbd8be;
@@ -321,7 +322,7 @@ html, body {
 }
 @font-face {
   font-family: "Shadows into Light";
-  src: url("/assets/fonts/Shadows_into_Light/ShadowsintoLight-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -337,27 +338,69 @@ html, body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Atlandsketches";
+  src: url("/assets/fonts/atlandsketches-bb/atlandsketchesbb_reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Freeride";
+  src: url("/assets/fonts/Freeride/Freeride.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TheUnseen";
+  src: url("/assets/fonts/TheUnseen/TheUnseen.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-family: "Amatic SC";
+  font-family: "Neucha", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 
 h1 {
-  font-family: "Caveat";
+  font-family: "Caveat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: bold;
+  font-size: var(--font-size-fluid-2);
 }
 
 h2 {
-  font-family: "Mynerve";
+  font-family: "Mynerve", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: bold;
+  text-transform: capitalize;
+  font-size: var(--font-size-fluid-2);
+}
+
+h3 {
+  font-family: "Neucha", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.logo {
+  font-size: clamp(0.5rem, 2rem, 2vw);
+}
+
+.nav_button {
+  font-family: "Shadows into Light", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: clamp(1rem, 2rem, 3vw);
+  color: var(--clr-link);
+  text-decoration: none;
 }
 
 p {
-  font-family: "Short Stack";
+  font-family: "GloriaHallelujah", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: bold;
+  font-size: var(--font-size-fluid-1);
+  filter: var(--shadow-layer1);
 }
 
 .proto {
-  font-family: "Mynerve";
+  font-family: "Mynerve", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -365,14 +408,14 @@ p {
   font-weight: bold;
 }
 .intro_prologue h2 {
-  text-transform: capitalize;
-  font-family: "Short Stack";
+  font-family: "Short Stack", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: var(--font-size-fluid-2);
 }
 .intro_prologue p {
-  font-family: "GloriaHallelujah";
+  font-family: "GloriaHallelujah", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 100;
+  font-size: var(--font-size-fluid-1);
 }
 
 strong {
@@ -381,23 +424,8 @@ strong {
 
 .nav_links {
   font-size: 1.75em;
+  font-family: "Mansalva", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: bold;
-}
-
-h1 {
-  font-size: var(--font-size-fluid-2);
-}
-
-p {
-  font-size: var(--font-size-fluid-1);
-}
-
-h2 {
-  font-size: var(--font-size-fluid-1);
-}
-
-.nav_links li a {
-  color: var(--clr-link);
 }
 
 .logo-label a {
@@ -423,7 +451,6 @@ kaso bawal daw pahiram nlng ng svg
 
 .doodle textarea {
   border-style: solid;
-  border-width: var(border-width);
   -o-border-image: var(url("./assets/images/border.svg") 10 10 10 10 stretch stretch);
      border-image: var(url("./assets/images/border.svg") 10 10 10 10 stretch stretch);
 }
@@ -432,7 +459,6 @@ kaso bawal daw pahiram nlng ng svg
 .doodle input,
 .doodle select {
   border-style: solid;
-  border-width: 10px 10px 10px 10px;
   -o-border-image: var(url("./assets/images/button.svg") 10 10 10 10 stretch stretch);
      border-image: var(url("./assets/images/button.svg") 10 10 10 10 stretch stretch);
 }
@@ -480,30 +506,125 @@ nav {
 }
 
 .logo-label {
+  min-width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.nav-label img {
-  height: clamp(2rem, 4vw, 4rem);
-  margin-inline: clamp(0.5rem, 2vw, 2rem);
-}
-
-.nav_links {
-  display: flex;
-  gap: clamp(1rem, 2vw, 2rem);
-}
-
-.nav_links li {
-  text-align: center;
-  padding: clamp(0.25rem, 1vw, 0.5rem);
-  background: url("./assets/images/seamless_paper_texture.png");
+  background: url("./assets/images/kelan-Paper-texture-filter.svg");
   border-style: solid;
+  border-color: var(--clr-border);
   border-radius: var(--border-radius);
   border-width: var(--border-width);
   -o-border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
      border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
+}
+
+.nav-label img {
+  height: clamp(2rem, 4vw, 4rem);
+  margin-inline: clamp(0.5rem, 1vw, 2rem);
+}
+.nav-label h2 {
+  margin-inline: clamp(0.5rem, 1vw, 2rem);
+}
+
+.nav_links {
+  display: flex;
+}
+
+.nav_button {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  min-width: 50px;
+  padding: 0.75rem;
+  margin: 0.25rem;
+  color: var(--clr-link);
+  align-self: center;
+  transition: all 235ms ease 0s;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+  background: none;
+  border: 0px none transparent;
+  outline: none;
+}
+.nav_button:hover {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+.nav_button:active {
+  top: 0.2rem;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.nav_button::after {
+  content: "";
+  z-index: -122;
+  background-color: hsl(30, 100%, 96%);
+  background-color: var(--clr-background);
+  background-image: url("./assets/images/kelan-Paper-texture-filter.svg");
+  border-color: hsl(40, 2%, 25%);
+  border-color: var(--primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-width: 3px;
+  pointer-events: none;
+  filter: drop-shadow(3px 3px 2px hsla(0, 0%, 0%, 0.6));
+}
+
+.nav_button:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+.nav_button:nth-child(2) {
+  transition-delay: 150ms;
+}
+
+.nav_button:nth-child(3) {
+  transition-delay: 100ms;
+}
+
+.nav_button:nth-child(4) {
+  transition-delay: 50ms;
+}
+
+.nav_button:nth-child(1)::after {
+  border-radius: 1% 5% 11% 56%/25% 2% 11% 1%;
+  transform: rotate(0.5deg);
+}
+
+.nav_button:nth-child(2)::after {
+  border-radius: 75% 50% 4% 70%/6% 4% 7% 5%;
+  transform: rotate(0.25deg);
+}
+
+.nav_button:nth-child(3)::after {
+  border-radius: 132% 117% 5% 130%/7% 8% 115% 6%;
+  transform: rotate(-0.5deg);
+}
+
+.nav_button:nth-child(4)::after {
+  border-radius: 68% 40% 6% 75%/7% 6% 60% 6%;
+  transform: rotate(-0.25deg);
 }
 
 .nav-toggle {
@@ -520,11 +641,16 @@ nav {
   .logo-label {
     justify-content: left;
   }
+  .nav-label {
+    cursor: pointer;
+  }
   .nav_links {
     display: flex;
     flex-direction: column;
     position: relative;
+    min-width: 100%;
     width: 100%;
+    max-width: 100%;
     opacity: 0;
     height: 0;
     overflow: hidden;
@@ -532,40 +658,30 @@ nav {
     transition-duration: 500ms;
     transition-behavior: allow-discrete;
   }
-  .nav_links li {
+  .nav_button {
     position: relative;
     translate: -100% 0;
     opacity: 0;
+    width: 100%;
     transition-property: opacity, translate;
     transition-duration: 500ms;
     transition-behavior: allow-discrete;
     transition-timing-function: cubic-bezier(0.47, 1.64, 0.41, 0.8);
   }
   #nav-toggle:checked ~ .nav_links {
-    height: 19rem;
+    height: -moz-max-content;
+    height: max-content;
     opacity: 1;
   }
-  #nav-toggle:checked ~ .nav_links li {
+  #nav-toggle:checked ~ .nav_links .nav_button {
     translate: 0 0;
     opacity: 1;
   }
   @starting-style {
-    #nav-toggle:checked ~ .nav_links li {
+    #nav-toggle:checked ~ .nav_links .nav_button {
       opacity: 0;
       translate: 200% 0;
     }
-  }
-  .nav_links li:nth-child(1) {
-    transition-delay: 200ms;
-  }
-  .nav_links li:nth-child(2) {
-    transition-delay: 150ms;
-  }
-  .nav_links li:nth-child(3) {
-    transition-delay: 100ms;
-  }
-  .nav_links li:nth-child(4) {
-    transition-delay: 50ms;
   }
   .navbar {
     display: flex;
@@ -759,10 +875,9 @@ nav {
   border-width: var(--border-width);
   -o-border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
      border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
-  border-radius: var(-border-radius);
-  background-color: var(--clr-mainBG);
-  background: url("./assets/images/seamless_paper_texture.png");
-  background-blend-mode: lighten;
+  border-radius: var(--border-radius);
+  background: url("./assets/images/kelan-Paper-texture-filter.svg");
+  background-blend-mode: saturation;
   grid-template-columns: auto 250px;
   box-shadow: var(--shadow-4);
 }
@@ -773,15 +888,16 @@ nav {
   margin: 0;
   display: inline;
   cursor: pointer;
-  transition: transform 200ms;
+  z-index: 1;
+  position: relative;
+  transition-duration: 200ms;
+  transition-property: all;
 }
 .custom_Emoticon:hover {
   transition-delay: 500ms;
-  transform: scale(3);
-}
-
-.custom_emoticon__3d:hover {
-  transform: scale(3);
+  transform: scale(5);
+  z-index: 10;
+  filter: drop-shadow(-5px -5px 1px #222);
 }
 
 .abouthim_message {
@@ -874,10 +990,9 @@ nav {
 }
 .hero .hero_message {
   max-width: clamp(300px, 75vw, 100% - 500px);
-  background: url("./assets/images/seamless_paper_texture.png");
-  background-color: var(--clr-mainBG);
-  background-color: hsla(0, 0%, 100%, 0.825);
-  filter: brightness(1.15);
+  background-color: #F4F5CD;
+  background-image: url("./assets/images/kelan-Paper-texture-filter.svg");
+  background-blend-mode: saturation;
 }
 .hero .hero_message h2 {
   margin-block-end: clamp(1rem, 1%, 3rem);
@@ -906,10 +1021,10 @@ nav {
   padding: 7px;
   /* Adjust as needed */
   /* Main box shadow */
-  box-shadow: 0 -7px #fff, 0 -14px #000, 7px 0 #fff, 7px -7px #000, 14px 0 #000, 0 7px #fff, 0 14px #000, -7px 0 #fff, -7px 7px #000, -14px 0 #000, -7px -7px #000, 7px 7px #000, 7px 21px rgba(0, 0, 0, 0.1), 21px 7px rgba(0, 0, 0, 0.1), 14px 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -7px #F4F5CD, 0 -14px #000, 7px 0 #F4F5CD, 7px -7px #000, 14px 0 #000, 0 7px #F4F5CD, 0 14px #000, -7px 0 #F4F5CD, -7px 7px #000, -14px 0 #000, -7px -7px #000, 7px 7px #000, 7px 21px rgba(0, 0, 0, 0.1), 21px 7px rgba(0, 0, 0, 0.1), 14px 14px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (width < 660px) {
+@media screen and (max-width: 660px) {
   .hero {
     position: relative;
   }
@@ -1060,7 +1175,7 @@ footer::after {
 }
 
 .projects {
-  margin: auto -2rem;
+  margin: auto -3rem;
   padding: 0;
 }
 .projects .projects_heading {
@@ -1241,14 +1356,7 @@ footer::after {
   border-width: var(--border-width);
   -o-border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
      border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
-  --shadow:var( --shadow-4,
-  0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-  0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-  0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-  0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-  0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-  0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%)));
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-4);
   border-radius: 10px;
 }
 

@@ -8,10 +8,11 @@ $aboutme_image__width: 250px;
   border-style: groove;
   border-width: var(--border-width);
   border-image: variables.$image-border-button;
-  border-radius: var(-border-radius);
-  background-color: var(--clr-mainBG);
-	background: variables.$image-background-texture;
-  background-blend-mode:lighten;
+  border-radius: var(--border-radius);
+  // background-color: var(--clr-mainBG);
+	background: variables.$image-background-crumpled-paper;
+  // background: variables.$image-background-texture ,url("./assets/images/kelan-Paper-texture-filter.svg") ;
+  background-blend-mode:saturation;
   grid-template-columns: auto $aboutme_image__width;
   box-shadow: var(--shadow-4);
 }
@@ -22,16 +23,24 @@ $aboutme_image__width: 250px;
   margin: 0;
   display: inline;
   cursor: pointer;
-  transition: transform 200ms;
+  z-index: 1;
+  position: relative;
+  transition-duration: 200ms;
+  transition-property: all;
+  // filter: drop-shadow(2px 2px 1px #222);
+  
+
   &:hover{
-    transition-delay: 500ms;
-	transform: scale(3);
+  transition-delay: 500ms;
+	transform: scale(5);
+  z-index: 10;
+  filter: drop-shadow(-5px -5px 1px #222);
   }
 }
-.custom_emoticon__3d:hover {
-	transform: scale(3);
-  
-}
+// .custom_emoticon__3d:hover {
+// 	transform: scale(5);
+//   z-index: 999999999999;
+// }
 
 .abouthim_message {
   padding: 1rem;
