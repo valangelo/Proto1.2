@@ -81,11 +81,6 @@
 @use "./assets/scss/base/doodle" as doodle;
 @use "./assets/scss/base/animations" as animations;
 
-@use "./assets/scss/components/navbar" as navbar;
-@use "./assets/scss/components/cards" as cards;
-@use "./assets/scss/components/scrollbar" as scrollbar;
-@use "./assets/scss/components/card_effect" as card_effect;
-@use "./assets/scss/components/stickynote_effect" as stickynote_effect;
 
 @use "./assets/scss/layouts/abouthim" as abouthim;
 @use "./assets/scss/layouts/certificates" as certificates;
@@ -95,6 +90,13 @@
 @use "./assets/scss/layouts/skills" as skills;
 @use "./assets/scss/layouts/footer" as footer;
 @use "./assets/scss/layouts/tdnn" as tdnn;
+
+@use "./assets/scss/components/navbar" as navbar;
+@use "./assets/scss/components/cards" as cards;
+@use "./assets/scss/components/scrollbar" as scrollbar;
+@use "./assets/scss/components/card_effect" as card_effect;
+@use "./assets/scss/components/stickynote_effect" as stickynote_effect;
+
 
 
 // $scss-path: "./assets/scss/";

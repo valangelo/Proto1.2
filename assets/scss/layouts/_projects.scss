@@ -1,22 +1,22 @@
 @use "../base/_variables";
 @use "../components/stickynote_effect";
 
-.projects {
-  // overflow: hidden;
-  // max-width:95%; 
-  margin: auto -3rem;
-  padding: 0;
-  .projects_heading{
-    font-size: clamp(1rem, 2.5vw, 2rem); 
-  }
-  .projects_heading_wrapper {
-    // margin-block-end: var(--layout-padding);
-  }
+// .projects {
+//   // overflow: hidden;
+//   // max-width:95%; 
+//   // margin: auto -3rem;
+//   // padding: 0;
+//   // .projects_heading{
+//   //   // font-size: clamp(1rem, 2.5vw, 2rem); 
+//   // }
+//   // .projects_heading_wrapper {
+//   //   // margin-block-end: var(--layout-padding);
+//   // }
 
-  h1 {
-    text-shadow: 1px 1px 5px hsla(0, 0%, 0%, 0.75);
-  }
-}//.projects
+//   // h1 {
+//   //   // text-shadow: 1px 1px 5px hsla(0, 0%, 0%, 0.75);
+//   // }
+// }//.projects
 
 
 .projects_media_scroller {
@@ -25,8 +25,8 @@
   container-type: inline-size;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 40%;
-  grid-template-rows: auto auto minmax(1fr, 250px);
+  // grid-auto-columns: 40%;
+  // grid-template-rows:   minmax(1fr, 1000px);
   padding: 0 var(--_spacer) var(--_spacer);
   overflow-x: auto;
   overscroll-behavior-inline: contain;
@@ -40,7 +40,7 @@
     text-decoration: none;
     padding: 1rem;
     img {
-      overflow: hidden;
+      // overflow: hidden;
       border-radius: 15px;
       box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(black, 0.6);
       transform: scale(1);

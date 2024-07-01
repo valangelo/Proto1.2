@@ -6,19 +6,18 @@ nav {
 }
 
 .navbar {
-  overflow: hidden;
-  background-clip: content-box;
-  -webkit-background-clip: text;
+ 
+  // z-index: 10000;
+  background-color: var(--clr-paperBG);
   filter:
     var(--shadow-layer1) var(--shadow-layer2) var(--shadow-layer3);
-  background-color: var(--clr-mainBG);
-  background: variables.$image-background-texture;
+  background: variables.$image-background-crumpled-paper;
   border-style: solid;
   border-color: var(--clr-border);
   border-radius: var(--border-radius);
   border-width: var(--border-width);
   border-image: variables.$image-border-button;
-  background-blend-mode: multiply;
+
   background-repeat: repeat;
   display: flex;
 }
@@ -31,15 +30,19 @@ nav {
   min-width: 150px;
   display: flex;
   // gap: 0.5rem;
+  margin-block-end: 5px;
   justify-content: center;
   align-items: center;
-  background: variables.$image-background-crumpled-paper;
-  // background: variables.$image-background-texture;
+  background-color: hsla(30, 100%, 96%, 1);
+  background-color: var(--clr-background);  
   border-style: solid;
   border-color: var(--clr-border);
   border-radius: var(--border-radius);
   border-width: var(--border-width);
   border-image: variables.$image-border-button;
+  // box-shadow: 2px 5px 5px #877;
+  
+  filter: drop-shadow(2px 2px 2px hsla(0, 0%, 0%, 1))
 }
 
 .nav-label {
@@ -101,7 +104,7 @@ nav {
   z-index: -122;
   background-color: hsla(30, 100%, 96%, 1);
   background-color: var(--clr-background);  
-  background-image: variables.$image-background-crumpled-paper;
+  // background-image: variables.$image-background-crumpled-paper;
   border-color: hsla(40, 2%, 25%,1);
   border-color: var(--primary);
   position: absolute;

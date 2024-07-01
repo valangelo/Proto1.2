@@ -3,31 +3,37 @@
 
 
 //Element Visualization
-@mixin pseudo-content($element, $offset: var(--layout_elements_offset), $margin: var(--layout-margin), $padding: var(--layout-padding)) {
-    position: relative;
-  margin: $margin;
+@mixin pseudo-content($element,
+                      $indent: var(--psuedo-indent),
+                      $offset: var(--psuedo-offset),
+                      $margin: var(--layout-margin),
+                      $padding: var(--layout-padding)
+                      )
+  {
+  position: relative;
+  margin-block: $margin;
   padding: $padding;
   &::before, &::after {
     position: absolute;
     font-family: "GloriaHallelujah";
     color: var(--clr-disabled);
     pointer-events: none;
-    left: $offset;
+    left: calc(#{$indent} * 2rem);
+    // left:0;
   }
 
   &::before {
     content: "<#{$element}>";
     top: $offset;
+    
   }
 
   &::after {
     content: "</#{$element}>";
     bottom: $offset;
+    
   }
 }
-
-
-
 html,body {
   background-color: var(--clr-shade);
   background: variables.$image-background-texture;
@@ -35,7 +41,7 @@ html,body {
   user-select: none;
 }
 .fakehtml {
-  @include pseudo-content("html");
+  @include pseudo-content("html");  
 }
 
 .fakebody {
@@ -43,14 +49,28 @@ html,body {
 }
 
 nav {
-  @include pseudo-content("nav");
+  @include pseudo-content("nav",
+  1,// Indent value
+  .5rem, // Offset value
+  1rem,// Margin value
+  3rem// Padding value
+  )
 }
 .hero {
-  @include pseudo-content(".hero");
+  // outline: solid 1px orangered;
+  @include pseudo-content("hero",
+  1,// Indent value
+  0rem, // Offset value
+  2rem,// Margin value
+  2rem// Padding value
+  );
 }
+
+
+
 .skills {
   @include pseudo-content("skills",
-  -2rem,
+  1.5,
   3rem 1.5rem,
   calc(var(--layout-padding) + 1rem));
 }

@@ -22,9 +22,9 @@
     font-size: 2rem;
     
     background: var(--background);
-    // background: variables.$image-background-texture;
-    // background-color: var(--clr-mainBG);
-	filter: brightness(1.15);
+    background: variables.$image-background-texture;
+    background-color: var(--clr-mainBG);
+	
     border-style: solid;
     border-width: var(--border-width);
     border-image: variables.$image-border-button;

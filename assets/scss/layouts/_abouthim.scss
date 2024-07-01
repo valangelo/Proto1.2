@@ -1,18 +1,18 @@
 // _abouthim.scss
 @use "../base/_variables" as variables;
 
-$aboutme_image__width: 250px;
+$aboutme_image__width: 300px;
 
 .abouthim-section {
   display: flex;
-  border-style: groove;
+  border-style: solid;
   border-width: var(--border-width);
   border-image: variables.$image-border-button;
   border-radius: var(--border-radius);
-  // background-color: var(--clr-mainBG);
-	background: variables.$image-background-crumpled-paper;
-  // background: variables.$image-background-texture ,url("./assets/images/kelan-Paper-texture-filter.svg") ;
-  background-blend-mode:saturation;
+  background-color: var(--clr-paperBG);
+	// background: variables.$image-background-crumpled-paper;
+  background: variables.$image-background-crumpled-paper;
+  // background-blend-mode:normal;
   grid-template-columns: auto $aboutme_image__width;
   box-shadow: var(--shadow-4);
 }
@@ -94,21 +94,49 @@ $aboutme_image__width: 250px;
 }
 
 .abouthim_image {
-  height: 250px;
+position: relative;
+ 
+
+  
   width: $aboutme_image__width;
-  transform: scale(1);
+  // transform: scale(1);
   filter: drop-shadow(5px 5px 5px #222);
   -webkit-filter: drop-shadow(5px 5px 5px #222);
 }
 
 .abouthim_image::before {
+// outline: 1px solid orangered;
+   animation: autoRotateAnimation;
+  animation-timeline: view();
+  // animation-timing-function: ease-in;
+  transform-origin: center center;
+  width: 100px;
+  // perspective-origin: 1000px;
+  transform-style: preserve-3d; 
+ @keyframes autoRotateAnimation {
+  0% {
+    transform: rotateX(0deg) rotateZ(0deg); /* Start rotation with no tilt */
+  }
+  50% {
+    transform: rotateX(50deg) rotateZ(180deg); /* Middle of rotation with tilt */
+  }
+  100% {
+    transform: rotateX(0deg) rotateZ(360deg); /* End rotation with no tilt */
+  }
+  }
+  //  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-image: url(./assets/images/confused.png) ;
   content: '';
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size:contain;
   position: absolute;
-  top: 0;
+  top: -25px;
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 1;
+  opacity: .3;
+  z-index: 999;
 }
 
 .abouthim_image:hover {

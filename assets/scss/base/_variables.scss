@@ -8,6 +8,7 @@
 	// $image-border-border: url("#{$asset-path}border.svg") 10 stretch;
 	// $image-border-button: url("#{$asset-path}button.svg") 10 stretch;
 	$image-background-texture:url("#{$asset-path}seamless_paper_texture.png");
+	$ruler:url("#{$asset-path}ruler.svg");
 	$image-background-crumpled-paper:url("#{$asset-path}kelan-Paper-texture-filter.svg");
 	// https://github.com/argyleink/open-props
 
@@ -20,11 +21,13 @@
 	--clr-font: hsla(0, 0%, 14%, 1);
 	--clr-background: hsla(30, 100%, 100%,1);
 	--clr-mainBG:hsla(49, 16%, 87%,1);
+	--clr-paperBG:hsl(61, 67%, 88%);
 	--clr-link: hsl(0, 0%, 11%);
 	--clr-border: hsla(0, 0%, 50%, 1);
 	--clr-shade: hsla(0, 0%, 73%, 1);
 	--clr-disabled: hsla(0, 0%, 50%, 1);
 	--clr-border:hsla(40, 2%, 25%,1);
+
 	
 	--pink: #ecb2ba;
     --pink-dark: #c6939a;
