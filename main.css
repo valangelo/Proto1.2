@@ -223,7 +223,6 @@ h6 {
 /* improve readability with max-width on paragraphs and lists */
 /* prevent orphans in supported browsers */
 p {
-  max-width: 75ch;
   text-wrap: pretty;
 }
 
@@ -357,6 +356,30 @@ html, body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "LoL";
+  src: url("/assets/fonts/LoL/BeaufortforLOL-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LifeCraft";
+  src: url("/assets/fonts/LifeCraft_font/LifeCraft_Font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "horizon-font";
+  src: url("/assets/fonts/horizon-font/Horizon-nMeM.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CatFont";
+  src: url("/assets/fonts/CatFont/OrientalCatsLight.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Neucha", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -376,28 +399,28 @@ h2 {
 }
 
 h3 {
-  font-family: "Neucha", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Caveat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bold;
   text-transform: capitalize;
+  font-size: var(--font-size-fluid-2);
 }
 
 .logo {
-  font-size: clamp(0.5rem, 2rem, 2vw);
+  font-size: clamp(1.12rem, 2rem, 2vw);
 }
 
 .nav_button {
   font-family: "Shadows into Light", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: clamp(1rem, 2rem, 3vw);
+  font-size: clamp(1.12rem, 2rem, 2vw);
   color: var(--clr-link);
   text-decoration: none;
 }
 
 p {
-  font-family: "GloriaHallelujah", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: "Neucha", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: normal;
   font-size: var(--font-size-fluid-1);
-  filter: var(--shadow-layer1);
 }
 
 .proto {
@@ -481,6 +504,8 @@ kaso bawal daw pahiram nlng ng svg
 
 .abouthim-section {
   display: flex;
+  grid-template-columns: auto 300px;
+  box-shadow: var(--shadow-4);
   border-style: solid;
   border-width: var(--border-width);
   -o-border-image: url("./assets/images/button.svg") 10 10 10 10 stretch stretch;
@@ -488,13 +513,10 @@ kaso bawal daw pahiram nlng ng svg
   border-radius: var(--border-radius);
   background-color: var(--clr-paperBG);
   background: url("./assets/images/kelan-Paper-texture-filter.svg");
-  grid-template-columns: auto 300px;
-  box-shadow: var(--shadow-4);
 }
 
 .custom_Emoticon {
   width: 1.25em;
-  height: 1.25em;
   margin: 0;
   display: inline;
   cursor: pointer;
@@ -502,53 +524,36 @@ kaso bawal daw pahiram nlng ng svg
   position: relative;
   transition-duration: 200ms;
   transition-property: all;
+  filter: drop-shadow(2px 2px 1px #222);
+  top: 5px;
 }
 .custom_Emoticon:hover {
-  transition-delay: 500ms;
+  transition-delay: 300ms;
   transform: scale(5);
   z-index: 10;
-  filter: drop-shadow(-5px -5px 1px #222);
+  filter: drop-shadow(-3px -3px 3px #222);
 }
 
 .abouthim_message {
   padding: 1rem;
-}
-.abouthim_message h1 {
-  font-weight: normal;
+  max-width: 70vw;
 }
 .abouthim_message h1:last-of-type {
   margin-block-end: 2rem;
 }
 .abouthim_message h2 {
-  cursor: pointer;
   padding-block-end: 1.5rem;
-  font-family: "Mynerve";
-  font-weight: bold;
-  font-size: var(--font-size-fluid-2);
 }
 .abouthim_message ul {
   position: relative;
 }
 .abouthim_message li {
+  position: relative;
   margin: 1.25rem;
-}
-.abouthim_message li::before {
-  content: "-";
-  font-size: var(--font-size-fluid-2);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-.abouthim_message span {
-  font-family: "Mynerve";
-  font-weight: bold;
-  font-size: var(--font-size-fluid-2);
+  list-style: circle;
 }
 .abouthim_message h3 {
   padding: 1rem;
-  font-family: "GloriaHallelujah";
-  font-weight: bold;
-  font-size: var(--font-size-fluid-1);
 }
 
 .abouthim_image {
@@ -556,37 +561,6 @@ kaso bawal daw pahiram nlng ng svg
   width: 300px;
   filter: drop-shadow(5px 5px 5px #222);
   -webkit-filter: drop-shadow(5px 5px 5px #222);
-}
-
-.abouthim_image::before {
-  animation: autoRotateAnimation;
-  animation-timeline: view();
-  transform-origin: center center;
-  width: 100px;
-  transform-style: preserve-3d;
-  background-image: url(./assets/images/confused.png);
-  content: "";
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: -25px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.3;
-  z-index: 999;
-}
-@keyframes autoRotateAnimation {
-  0% {
-    transform: rotateX(0deg) rotateZ(0deg); /* Start rotation with no tilt */
-  }
-  50% {
-    transform: rotateX(50deg) rotateZ(180deg); /* Middle of rotation with tilt */
-  }
-  100% {
-    transform: rotateX(0deg) rotateZ(360deg); /* End rotation with no tilt */
-  }
 }
 
 .abouthim_image:hover {
@@ -600,6 +574,42 @@ kaso bawal daw pahiram nlng ng svg
   filter: drop-shadow(3px 3px 2px #222);
   transition: transform 10ms;
   transform: scale(0.9);
+}
+
+@media screen and (max-width: 768px) {
+  .abouthim-section {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .abouthim_image {
+    width: 40vw;
+    width: 40dvw;
+  }
+}
+.wotlk {
+  font-family: "LifeCraft";
+  font-weight: lighter;
+}
+
+.lol {
+  font-family: "LoL";
+  font-weight: bold;
+}
+
+.horizon {
+  font-family: "horizon-font";
+  font-weight: bold;
+}
+
+.catfont {
+  font-family: "catFont";
+  font-weight: bolder;
+}
+
+.gelo {
+  font-family: "Mansalva";
+  font-weight: bolder;
+  font-size: 2rem;
 }
 
 .stickynote_default {
@@ -710,6 +720,7 @@ kaso bawal daw pahiram nlng ng svg
 }
 
 .hero {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -763,8 +774,7 @@ kaso bawal daw pahiram nlng ng svg
   }
   .hero .hero_image {
     position: absolute;
-    top: -95px;
-    z-index: -1000;
+    top: -65px;
     width: 180px;
   }
   .hero_message {
@@ -865,48 +875,109 @@ nav::after {
   bottom: 0rem;
 }
 
-.skills {
+.abouthim-section, .skills {
   position: relative;
-  margin-block: calc(var(--layout-padding) + 1rem);
-  padding: var(--layout-padding);
+  margin-block: 3rem;
+  padding: 2rem;
 }
-.skills::before, .skills::after {
+.abouthim-section::before, .abouthim-section::after, .skills::before, .skills::after {
   position: absolute;
   font-family: "GloriaHallelujah";
   color: var(--clr-disabled);
   pointer-events: none;
-  left: calc(1.5 * 2rem);
+  left: calc(0.7 * 2rem);
 }
-.skills::before {
-  content: "<skills>";
-  top: 3rem 1.5rem;
+.abouthim-section::before, .skills::before {
+  content: "<section>";
+  top: -2rem;
 }
-.skills::after {
-  content: "</skills>";
-  bottom: 3rem 1.5rem;
+.abouthim-section::after, .skills::after {
+  content: "</section>";
+  bottom: -2rem;
+}
+
+.projects {
+  position: relative;
+  margin-block: 3rem;
+  padding: 2rem;
+}
+.projects::before, .projects::after {
+  position: absolute;
+  font-family: "GloriaHallelujah";
+  color: var(--clr-disabled);
+  pointer-events: none;
+  left: calc(1 * 2rem);
+}
+.projects::before {
+  content: "<section>";
+  top: -1rem;
+}
+.projects::after {
+  content: "</section>";
+  bottom: -1rem;
 }
 
 footer {
   position: relative;
-  margin-block: calc(var(--layout-padding) + 1rem);
-  padding: var(--layout-padding);
+  margin-block: 2rem;
+  padding: 0rem;
 }
 footer::before, footer::after {
   position: absolute;
   font-family: "GloriaHallelujah";
   color: var(--clr-disabled);
   pointer-events: none;
-  left: calc(-2rem * 2rem);
+  left: calc(0 * 2rem);
 }
 footer::before {
   content: "<footer>";
-  top: calc(var(--layout-margin) + 1rem);
+  top: -2rem;
 }
 footer::after {
   content: "</footer>";
-  bottom: calc(var(--layout-margin) + 1rem);
+  bottom: -2rem;
 }
 
+:target {
+  animation: shake 0.5s;
+  animation-delay: 0.75s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -1px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-1px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-2px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -1px) rotate(-1deg);
+  }
+}
 .projects_media_scroller {
   border: #000 solid 1px;
   --_spacer: 3rem;
@@ -1113,14 +1184,12 @@ footer::after {
 }
 
 .contact_him {
-  height: 40vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: clamp(10px, 2vw, 20px);
-  padding: clamp(10px, 2vw, 20px);
   background: var(--background);
   background: url("./assets/images/seamless_paper_texture.png");
   background-color: var(--clr-mainBG);
@@ -1134,19 +1203,10 @@ footer::after {
 }
 
 .footer_section {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: clamp(10px, 2vw, 20px);
-}
-
-.footer_message,
-.footer_links,
-.footer_form,
-.copyright {
-  width: 100%;
 }
 
 .footer_message {
@@ -1156,7 +1216,6 @@ footer::after {
 }
 .footer_message img {
   margin: 0 auto;
-  /* Center the image */
   align-items: center;
   text-align: center;
 }
@@ -1168,7 +1227,6 @@ footer::after {
 }
 
 .footer_links {
-  width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
@@ -1178,7 +1236,6 @@ footer::after {
 }
 
 .footer_links a img {
-  height: clamp(50px, 5vw, 63px);
   width: clamp(50px, 5vw, 63px);
   aspect-ratio: 1/1;
   -o-object-fit: contain;
@@ -1191,8 +1248,8 @@ footer::after {
 }
 
 .footer_form {
-  width: 25vw;
-  height: 30vh;
+  width: -moz-max-content;
+  width: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1205,7 +1262,6 @@ footer::after {
 
 .form-group {
   gap: 1rem;
-  font-size: 2rem;
   display: flex;
   align-items: center;
 }
@@ -1244,6 +1300,24 @@ footer::after {
   margin: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .footer_links {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(5px, 1vw, 10px);
+    /* Adjust the gap between links if needed */
+  }
+  .footer_links a img {
+    height: clamp(50px, 5vw, 63px);
+    width: clamp(50px, 5vw, 63px);
+    aspect-ratio: 1/1;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 nav {
   max-width: 100vw;
   max-width: 100dvw;
@@ -1285,7 +1359,7 @@ nav {
 }
 
 .nav-label img {
-  height: clamp(2rem, 4vw, 4rem);
+  height: clamp(3rem, 4vw, 4rem);
   margin-inline: clamp(0.5rem, 1vw, 2rem);
 }
 .nav-label h2 {

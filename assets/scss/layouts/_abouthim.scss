@@ -5,21 +5,27 @@ $aboutme_image__width: 300px;
 
 .abouthim-section {
   display: flex;
+  // max-width: fit-content;
+  // margin-inline: auto;
+  // background-blend-mode:normal;
+  grid-template-columns: auto $aboutme_image__width;
+  box-shadow: var(--shadow-4);
+  
+  // width: 80vw;
   border-style: solid;
   border-width: var(--border-width);
   border-image: variables.$image-border-button;
   border-radius: var(--border-radius);
   background-color: var(--clr-paperBG);
-	// background: variables.$image-background-crumpled-paper;
   background: variables.$image-background-crumpled-paper;
-  // background-blend-mode:normal;
-  grid-template-columns: auto $aboutme_image__width;
-  box-shadow: var(--shadow-4);
 }
+
+
+
 
 .custom_Emoticon {
   width: 1.25em;
-  height: 1.25em;
+  // height: 1.25em;
   margin: 0;
   display: inline;
   cursor: pointer;
@@ -27,117 +33,95 @@ $aboutme_image__width: 300px;
   position: relative;
   transition-duration: 200ms;
   transition-property: all;
-  // filter: drop-shadow(2px 2px 1px #222);
-  
-
+  filter: drop-shadow(2px 2px 1px #222);
+  top:5px;
   &:hover{
-  transition-delay: 500ms;
+  transition-delay: 300ms;
 	transform: scale(5);
   z-index: 10;
-  filter: drop-shadow(-5px -5px 1px #222);
+  filter: drop-shadow(-3px -3px 3px #222);
   }
 }
-// .custom_emoticon__3d:hover {
-// 	transform: scale(5);
-//   z-index: 999999999999;
-// }
+
 
 .abouthim_message {
-  padding: 1rem;
   
-
+  padding: 1rem;
+  max-width: 70vw;
+  // outline: 2px solid orangered;
   h1 {
-    font-weight: normal;
+    // font-weight: normal;
     &:last-of-type {
       margin-block-end: 2rem;
     }
   }
 
   h2 {
-	cursor: pointer;
+	// cursor: pointer;
     padding-block-end: 1.5rem;
-    font-family: 'Mynerve';
-    font-weight: bold;
-    font-size: var(--font-size-fluid-2);
+    // font-family: 'Mynerve';
+    // font-weight: bold;
+
   }
 
   ul{
     position: relative;
   }
   li {
-    
+    position: relative;
     margin: 1.25rem;
-    // list-style: circle;
-    &::before{
-      content: "-";
-      font-size: var(--font-size-fluid-2);
-      font-weight: bold;
-      position: absolute;
-      left:  0;
-      // top:0;
-    }
+    list-style: circle;
 
-  }
-
-  span {
-    font-family: 'Mynerve';
-    font-weight: bold;
-    font-size: var(--font-size-fluid-2);
   }
 
   h3 {
     padding: 1rem;
-    font-family: 'GloriaHallelujah';
-    font-weight: bold;
-    font-size: var(--font-size-fluid-1);
+    // font-family: 'GloriaHallelujah';
+    // font-weight: bold;
+    // font-size: var(--font-size-fluid-1);
   }
 }
 
 .abouthim_image {
 position: relative;
- 
-
-  
   width: $aboutme_image__width;
   // transform: scale(1);
   filter: drop-shadow(5px 5px 5px #222);
   -webkit-filter: drop-shadow(5px 5px 5px #222);
 }
 
-.abouthim_image::before {
-// outline: 1px solid orangered;
-   animation: autoRotateAnimation;
-  animation-timeline: view();
-  // animation-timing-function: ease-in;
-  transform-origin: center center;
-  width: 100px;
-  // perspective-origin: 1000px;
-  transform-style: preserve-3d; 
- @keyframes autoRotateAnimation {
-  0% {
-    transform: rotateX(0deg) rotateZ(0deg); /* Start rotation with no tilt */
-  }
-  50% {
-    transform: rotateX(50deg) rotateZ(180deg); /* Middle of rotation with tilt */
-  }
-  100% {
-    transform: rotateX(0deg) rotateZ(360deg); /* End rotation with no tilt */
-  }
-  }
-  //  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  background-image: url(./assets/images/confused.png) ;
-  content: '';
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size:contain;
-  position: absolute;
-  top: -25px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: .3;
-  z-index: 999;
-}
+// .abouthim_image::before {
+//    animation: autoRotateAnimation;
+//   animation-timeline: view();
+//   transform-origin: center center;
+//   width: 5rem;
+//   perspective-origin: 1000px;
+//   transform-style: preserve-3d; 
+//  @keyframes autoRotateAnimation {
+//   0% {
+//     transform: rotateX(0deg) rotateZ(0deg); /* Start rotation with no tilt */
+//   }
+//   50% {
+//     transform: rotateX(50deg) rotateZ(180deg); /* Middle of rotation with tilt */
+//   }
+//   100% {
+//     transform: rotateX(0deg) rotateZ(360deg); /* End rotation with no tilt */
+//   }
+//   }
+//   //  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+//   background-image: url(./assets/images/confused.png) ;
+//   content: '';
+//   height: 100px;
+//   background-repeat: no-repeat;
+//   background-size:contain;
+//   position: absolute;
+//   top: -15px;
+//   left: 1rem;
+//   right: 0;
+//   bottom: 0;
+//   opacity: .3;
+//   z-index: 999;
+// }
 
 .abouthim_image:hover {
   filter: drop-shadow(7px 7px 7px #222);
@@ -152,3 +136,47 @@ position: relative;
   transition: transform 10ms;
   transform: scale(0.90);
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+.abouthim-section {
+//   display:block;
+align-items: center;
+flex-direction: column-reverse;
+}
+
+.abouthim_image {
+  width: 40vw;
+  width: 40dvw;
+}
+
+
+}
+  .wotlk{
+    font-family: 'LifeCraft';
+    font-weight:lighter;
+    // font-weight: bold;
+    // font-size: var(--font-size-fluid-2);
+  }
+  .lol{
+    font-family: 'LoL';
+    font-weight: bold;
+    // font-size: var(--font-size-fluid-2);
+  }
+  .horizon{
+    font-family: 'horizon-font';
+    font-weight: bold;
+    // font-size: var(--font-size-fluid-2);
+  }
+  .catfont{
+    font-family: 'catFont';
+    font-weight:bolder;
+    // color:red;
+  }
+  .gelo{
+    font-family: 'Mansalva';
+    font-weight:bolder;
+    font-size: 2rem;
+  }

@@ -2,7 +2,7 @@
 @use "../components/stickynote_effect";
 
 .contact_him {
-    height: 40vh;
+    // height: 40vh;
     // margin: 3rem;
     display: flex;
     flex-direction: row;
@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     gap: clamp(10px, 2vw, 20px);
-    padding: clamp(10px, 2vw, 20px);
+    // padding: clamp(10px, 2vw, 20px);
     background: var(--background);
     background: variables.$image-background-texture;
     background-color: var(--clr-mainBG);
@@ -28,30 +28,24 @@ footer>* {
 
 
 .footer_section {
-    width: 100%;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: clamp(10px, 2vw, 20px);
+    // padding: clamp(10px, 2vw, 20px);
+    // padding: 1000px;
 }
 
-.footer_message,
-.footer_links,
-.footer_form,
-.copyright {
-    width: 100%;
-}
 
 .footer_message {
+    // outline: 1px solid orangered;
     align-items: center;
     text-align: center;
 
     img {
+        // outline: 1px solid yellow;
         margin: 0 auto;
-        /* Center the image */
-
-        // outline: 1px solid orangered;
         align-items: center;
         text-align: center;
     }
@@ -59,6 +53,7 @@ footer>* {
     width: 25vw;
 
     p {
+        // outline: 1px solid orange;
         display: inline;
     }
 
@@ -69,7 +64,7 @@ footer>* {
 
 .footer_links {
     
-    width: auto;
+    // width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -79,7 +74,6 @@ footer>* {
 }
 
 .footer_links a img {
-    height: clamp(50px, 5vw, 63px);
     width: clamp(50px, 5vw, 63px);
     aspect-ratio: 1 / 1;
     object-fit: contain;
@@ -91,8 +85,9 @@ footer>* {
 }
 
 .footer_form {
-    width: 25vw;
-    height: 30vh;
+    // outline: 1px solid green;
+    // height: 30vh;
+    width:max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +103,6 @@ footer>* {
 
 .form-group {
     gap: 1rem;
-    font-size: 2rem;
     display: flex;
     //   flex-direction: column;
     //   justify-content: center;
@@ -152,8 +146,33 @@ footer>* {
 }
 
 .copyright p {
-    // background-color: red;
+    
     text-align: center;
     width: 100%;
     margin: 0;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .footer_links {
+    
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(5px, 1vw, 10px);
+    /* Adjust the gap between links if needed */
+}
+
+.footer_links a img {
+    height: clamp(50px, 5vw, 63px);
+    width: clamp(50px, 5vw, 63px);
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
 }

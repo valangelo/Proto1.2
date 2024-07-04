@@ -35,6 +35,10 @@ $font-path: "/assets/fonts/";
 @include font-face('Atlandsketches', 'atlandsketches-bb/atlandsketchesbb_reg');
 @include font-face('Freeride', 'Freeride/Freeride',normal, 'opentype');
 @include font-face('TheUnseen', 'TheUnseen/TheUnseen');
+@include font-face('LoL', 'LoL/BeaufortforLOL-Medium');
+@include font-face('LifeCraft', 'LifeCraft_font/LifeCraft_Font');
+@include font-face('horizon-font', 'horizon-font/Horizon-nMeM');
+@include font-face('CatFont', 'CatFont/OrientalCatsLight',normal, 'opentype');
 
 // Define a mixin for font styles
 @mixin font-style($family, $weight: normal) {
@@ -48,27 +52,30 @@ body {
 }
 
 h1 {
-  @include font-style('Caveat', bold);
+  @include font-style('Caveat',bold);
   font-size: var(--font-size-fluid-2);
+  // filter: var(--shadow-layer1)
 }
 
 h2 {
-  @include font-style('Mynerve', bold);
+  @include font-style('Mynerve',bold);
   text-transform: capitalize;
   font-size: var(--font-size-fluid-2);
+  // filter: var(--shadow-layer1)
 }
 h3 {
-  @include font-style('Neucha');
+  @include font-style('Caveat',bold);
   text-transform: capitalize;
-  // font-size: var(--font-size-fluid-2);
+  font-size: var(--font-size-fluid-2);
+  // filter: var(--shadow-layer1)
 }
 // NAV
 .logo{
-  font-size: clamp(.5rem, 2rem, 2vw);  
+  font-size: clamp(1.12rem, 2rem, 2vw);  
 }
 .nav_button{
   @include font-style('Shadows into Light');
-  font-size: clamp(1rem, 2rem, 3vw);  
+  font-size: clamp(1.12rem, 2rem, 2vw);  
   color: var(--clr-link);
   text-decoration: none;
 }
@@ -76,10 +83,10 @@ h3 {
 // /NAV
 
 p {
-  @include font-style('GloriaHallelujah', bold);
+  @include font-style('Neucha');
   // @include font-style('Freeride', bold);
   font-size: var(--font-size-fluid-1);
-  filter: var(--shadow-layer1)
+  
 }
 
 .proto {
